@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scott Breen — Independent iOS Developer</title>
+  <meta name="description" content="Scott Breen, independent iOS developer. Making the Buddy family of apps — thoughtfully crafted iOS apps built for everyday moments." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://scottbreendev.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://scottbreendev.github.io/" />
+  <meta property="og:title"       content="Scott Breen — Independent iOS Developer" />
+  <meta property="og:description" content="Making apps that become your buddy. A growing family of thoughtfully crafted iOS apps." />
+  <meta property="og:image"       content="https://scottbreendev.github.io/images/og-image.png" />
+  <!-- TODO: Create images/og-image.png (1200×630px) — see Go Live Checklist in eai_website_root.md -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Scott Breen — iOS Developer" />
+  <meta name="twitter:description" content="Making apps that become your buddy." />
+  <meta name="twitter:image"       content="https://scottbreendev.github.io/images/og-image.png" />
+
+  <!-- Favicon (pineapple SVG) -->
+  <link rel="icon" type="image/svg+xml" href="images/pineapple.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Scott Breen",
+      "url": "https://scottbreendev.github.io/",
+      "jobTitle": "iOS Developer",
+      "description": "Independent iOS developer making the Buddy family of apps — thoughtfully crafted iOS apps for everyday moments.",
+      "email": "scott.breen.dev@outlook.com",
+      "knowsAbout": ["iOS Development", "Swift", "SwiftUI", "App Store", "Phase 10"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Scott Breen",
+      "url": "https://scottbreendev.github.io/",
+      "description": "Portfolio of Scott Breen, independent iOS developer and creator of the Buddy family of apps."
+    }
+  ]
+  </script>
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand:  'var(--color-brand)',
+            accent: 'var(--color-accent)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Prevent flash of dark background before CSS loads -->
+  <style>html.dark { background-color: #100E08; }</style>
+
+  <!-- Alpine.js (deferred) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- App JS — non-deferred so the dark-mode IIFE runs before the body paints -->
+  <script src="js/app.js"></script>
+
+  <!-- TODO: Uncomment and configure Firebase Analytics when ready
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
+    const app = initializeApp({
+      apiKey:            "REPLACE_WITH_ROOT_SITE_API_KEY",
+      authDomain:        "score-buddy-for-phase-10.firebaseapp.com",
+      projectId:         "score-buddy-for-phase-10",
+      appId:             "REPLACE_WITH_ROOT_SITE_APP_ID",
+      measurementId:     "REPLACE_WITH_ROOT_SITE_MEASUREMENT_ID"
+    });
+    getAnalytics(app);
+  </script>
+  -->
+</head>
+
+<body>
+
+  <!-- ── Reusable pineapple SVG symbol ──────────────────────────── -->
+  <!-- Defined once here; referenced everywhere with <use href="#pineapple"> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="score-buddy-icon" viewBox="0 0 1024 1024">
+        <defs>
+          <linearGradient id="sb-fg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#3478F6"/>
+            <stop offset="100%" stop-color="#2860C5"/>
+          </linearGradient>
+        </defs>
+        <rect x="143.36" y="180.22" width="516.10" height="722.53" rx="103.22" fill="#3478F6" fill-opacity="0.3" transform="rotate(-8 512 512)"/>
+        <rect x="327.68" y="165.48" width="516.10" height="722.53" rx="103.22" fill="#3478F6" fill-opacity="0.5" transform="rotate(4 512 512)"/>
+        <rect x="253.95" y="150.73" width="516.10" height="722.53" rx="103.22" fill="url(#sb-fg)"/>
+        <text x="512" y="610.06" font-family="-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="258.05" font-weight="700" text-anchor="middle" fill="white">10</text>
+      </symbol>
+
+      <symbol id="pineapple" viewBox="0 0 40 52" fill="none">
+        <!-- Crown — 5 leaves (hardcoded green — always green regardless of context) -->
+        <!-- Far left fan leaf -->
+        <path d="M11 19 C9.5 16 8.5 12.5 9 10 C11.5 12 14 15.5 17 19Z" fill="#2D7A52"/>
+        <!-- Left diagonal leaf -->
+        <path d="M14 19 C13.5 13.5 14 8 15.5 4 C17.5 8 18 14 19.5 19Z" fill="#2E7050"/>
+        <!-- Centre leaf (tallest) -->
+        <path d="M17 19 C17.5 12 19 5 20 1.5 C21 5 22.5 12 23 19Z" fill="#357A44"/>
+        <!-- Right diagonal leaf -->
+        <path d="M26 19 C26.5 13.5 26 8 24.5 4 C22.5 8 22 14 20.5 19Z" fill="#2E7050"/>
+        <!-- Far right fan leaf -->
+        <path d="M29 19 C30.5 16 31.5 12.5 31 10 C28.5 12 26 15.5 23 19Z" fill="#2D7A52"/>
+        <!-- Body — currentColor (gold in light; lighter gold in dark via CSS token) -->
+        <ellipse cx="20" cy="34" rx="12" ry="16" fill="currentColor" opacity="0.92"/>
+        <!-- Depth shading -->
+        <ellipse cx="20" cy="42" rx="9" ry="8" fill="currentColor" opacity="0.2"/>
+        <!-- Highlight -->
+        <ellipse cx="15.5" cy="26" rx="4" ry="3.5" fill="white" opacity="0.14" transform="rotate(-20 15.5 26)"/>
+        <!-- Scale texture — horizontal arcs -->
+        <path d="M9.5 28 Q20 25.5 30.5 28" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.22"/>
+        <path d="M8.5 34 Q20 31.5 31.5 34" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.22"/>
+        <path d="M9.5 40 Q20 37.5 30.5 40" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.22"/>
+        <path d="M12.5 46 Q20 43.5 27.5 46" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.18"/>
+        <!-- Scale texture — vertical arcs -->
+        <path d="M13.5 20.5 Q13 34 14.5 47.5" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.18"/>
+        <path d="M17 18.5 Q16.5 34 17.5 49.5" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.18"/>
+        <path d="M20 18 Q20.5 34 20 50" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.18"/>
+        <path d="M23 18.5 Q23.5 34 22.5 49.5" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.18"/>
+        <path d="M26.5 20.5 Q27 34 25.5 47.5" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.18"/>
+      </symbol>
+    </defs>
+  </svg>
+
+
+  <!-- ── Navigation ─────────────────────────────────────────────── -->
+  <header id="nav" class="nav-root">
+    <div class="nav-inner">
+
+      <a href="/" class="nav-logo" aria-label="Scott Breen — home">
+        <svg class="nav-pineapple" viewBox="0 0 40 52" aria-hidden="true">
+          <use href="#pineapple"/>
+        </svg>
+        <span class="nav-wordmark">Scott Breen</span>
+      </a>
+
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Page sections">
+          <a href="#apps" class="nav-link">Apps</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <!-- Theme toggle — x-data creates an Alpine scope for $store access -->
+        <button
+          x-data
+          @click="$store.theme.toggle()"
+          :aria-label="$store.theme.dark ? 'Switch to light mode' : 'Switch to dark mode'"
+          class="theme-btn">
+          <!-- Sun icon — shown in dark mode (also CSS .theme-sun fallback before Alpine) -->
+          <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            x-show="$store.theme.dark" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <!-- Moon icon — shown in light mode -->
+          <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            x-show="!$store.theme.dark" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ── Hero ───────────────────────────────────────────────────── -->
+  <section class="hero">
+
+    <!-- Large faint pineapple watermark, bottom-right -->
+    <div class="hero-watermark" aria-hidden="true">
+      <svg viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+    </div>
+
+    <div class="hero-content">
+
+      <!-- Brand mark -->
+      <div class="hero-icon-wrap">
+        <svg class="hero-pineapple" viewBox="0 0 40 52" role="img" aria-label="Pineapple — Scott Breen brand mark">
+          <use href="#pineapple"/>
+        </svg>
+      </div>
+
+      <p class="hero-overline hero-anim">Independent iOS Developer</p>
+
+      <h1 class="hero-headline hero-anim">
+        Making apps that become<br>
+        <em>your buddy.</em>
+      </h1>
+
+      <p class="hero-sub hero-anim">
+        A growing family of thoughtfully crafted iOS apps —
+        built to make everyday moments a little better.
+      </p>
+
+      <a href="#apps" class="hero-scroll-cta hero-anim" aria-label="Scroll down to see the apps">
+        See the apps
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <polyline points="19 12 12 19 5 12"/>
+        </svg>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- ── Apps ───────────────────────────────────────────────────── -->
+  <section id="apps" class="apps-section">
+    <div class="section-inner">
+
+      <div class="section-header">
+        <p class="section-label">Apps</p>
+        <h2 class="section-title apps-anim">The Buddy Family</h2>
+        <p class="section-sub apps-anim">Every app does one thing, and does it really well.</p>
+      </div>
+
+      <div class="apps-grid">
+
+        <!-- ── Score Buddy for Phase 10 — Live ── -->
+        <a href="/scorebuddyforphase10/"
+          class="app-card app-card-live apps-anim"
+          aria-label="Score Buddy for Phase 10 — visit the app site">
+
+          <div class="app-card-header">
+            <div class="app-card-icon">
+              <svg viewBox="0 0 1024 1024" width="56" height="56" aria-label="Score Buddy for Phase 10 app icon" role="img">
+                <use href="#score-buddy-icon"/>
+              </svg>
+            </div>
+            <span class="app-badge app-badge-live">Live on App Store</span>
+          </div>
+
+          <div class="app-card-body">
+            <h3 class="app-card-title">Score Buddy</h3>
+            <p class="app-card-subtitle">for Phase 10</p>
+            <p class="app-card-desc">The Phase 10 score tracker. Round-by-round scoring, skip card analytics, live rankings, and deep stats for serious game night players.</p>
+          </div>
+
+          <div class="app-card-footer">
+            <span class="app-card-link">
+              Visit site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </span>
+          </div>
+
+        </a>
+
+        <!-- ── Coming Soon #1 ── -->
+        <div class="app-card app-card-soon apps-anim" aria-label="New Buddy app — coming soon">
+          <div class="app-card-header">
+            <div class="app-card-icon app-card-icon-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+            </div>
+            <span class="app-badge app-badge-soon">Coming Soon</span>
+          </div>
+          <div class="app-card-body">
+            <h3 class="app-card-title">___ Buddy</h3>
+            <p class="app-card-subtitle">Under wraps</p>
+            <p class="app-card-desc">The next app in the Buddy family is already in the works — focused, polished, and built with the same care as Score Buddy.</p>
+          </div>
+          <div class="app-card-footer">
+            <a href="mailto:scott.breen.dev@outlook.com?subject=Buddy%20App%20Interest" class="app-card-notify-link">
+              Get notified
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ── Coming Soon #2 ── -->
+        <div class="app-card app-card-soon apps-anim" aria-label="Another Buddy app — coming soon">
+          <div class="app-card-header">
+            <div class="app-card-icon app-card-icon-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+            </div>
+            <span class="app-badge app-badge-soon">Coming Soon</span>
+          </div>
+          <div class="app-card-body">
+            <h3 class="app-card-title">___ Buddy</h3>
+            <p class="app-card-subtitle">Under wraps</p>
+            <p class="app-card-desc">More Buddy apps on the way — each one takes a single, everyday problem and solves it with care.</p>
+          </div>
+          <div class="app-card-footer">
+            <a href="mailto:scott.breen.dev@outlook.com?subject=Buddy%20App%20Interest" class="app-card-notify-link">
+              Get notified
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── Contact ────────────────────────────────────────────────── -->
+  <section id="contact" class="contact-section">
+    <div class="contact-inner contact-anim">
+      <p class="contact-label">Say Hello</p>
+      <h2 class="contact-title">Questions, press,<br>or general hellos</h2>
+      <a href="mailto:scott.breen.dev@outlook.com" class="contact-link">
+        scott.breen.dev@outlook.com
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ── Footer ─────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div class="footer-logo">
+        <svg class="footer-pineapple" viewBox="0 0 40 52" aria-hidden="true">
+          <use href="#pineapple"/>
+        </svg>
+        <span>Scott Breen</span>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/scorebuddyforphase10/">Score Buddy</a>
+      </nav>
+
+      <p class="footer-copy">© 2026 Scott Breen. All rights reserved.</p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
