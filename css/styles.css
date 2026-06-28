@@ -88,13 +88,15 @@ html.dark .theme-moon { display: none;  }
   top: 0; left: 0; right: 0;
   z-index: 50;
   height: 64px;
-  background-color: transparent;
+  background-color: color-mix(in srgb, var(--color-bg) 80%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid transparent;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .nav-root.scrolled {
-  background-color: var(--color-bg);
+  background-color: color-mix(in srgb, var(--color-bg) 92%, transparent);
   border-bottom-color: var(--color-border);
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
 }
@@ -374,9 +376,14 @@ html.dark .theme-moon { display: none;  }
 }
 
 .app-card-live:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.012);
   border-color: var(--color-brand);
-  box-shadow: 0 8px 32px rgba(192, 138, 20, 0.14);
+  box-shadow: 0 12px 36px rgba(192, 138, 20, 0.16);
+}
+
+.app-card-live:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 3px;
 }
 
 .dark .app-card-live:hover {

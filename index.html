@@ -6,6 +6,10 @@
   <title>Scott Breen — Independent iOS Developer</title>
   <meta name="description" content="Scott Breen, independent iOS developer. Making the Buddy family of apps — thoughtfully crafted iOS apps built for everyday moments." />
 
+  <!-- Browser chrome colour (matches light/dark page background) -->
+  <meta name="theme-color" content="#FEFCF3" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#100E08" media="(prefers-color-scheme: dark)" />
+
   <!-- Canonical -->
   <link rel="canonical" href="https://scottbreendev.github.io/" />
 
@@ -15,7 +19,6 @@
   <meta property="og:title"       content="Scott Breen — Independent iOS Developer" />
   <meta property="og:description" content="Making apps that become your buddy. A growing family of thoughtfully crafted iOS apps." />
   <meta property="og:image"       content="https://scottbreendev.github.io/images/og-image.png" />
-  <!-- TODO: Create images/og-image.png (1200×630px) — see Go Live Checklist in eai_website_root.md -->
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
@@ -50,6 +53,67 @@
       "name": "Scott Breen",
       "url": "https://scottbreendev.github.io/",
       "description": "Portfolio of Scott Breen, independent iOS developer and creator of the Buddy family of apps."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "The Buddy Family of iOS apps",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Score Buddy for Phase 10",
+            "operatingSystem": "iOS, iPadOS",
+            "applicationCategory": "GameApplication",
+            "description": "The Phase 10 score tracker. Round-by-round scoring, skip card analytics, live rankings, and deep stats for serious game night players.",
+            "url": "https://scottbreendev.github.io/scorebuddyforphase10/",
+            "author": { "@type": "Person", "name": "Scott Breen" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Time Zone Buddy",
+            "operatingSystem": "iOS, iPadOS",
+            "applicationCategory": "BusinessApplication",
+            "description": "World clocks, meeting overlap finder, and work-hours awareness — beautifully at a glance for people who work across time zones.",
+            "url": "https://tzbuddy.app",
+            "author": { "@type": "Person", "name": "Scott Breen" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Commission Buddy",
+            "operatingSystem": "iOS, iPadOS",
+            "applicationCategory": "FinanceApplication",
+            "description": "The privacy-first real estate commission calculator and income tracker. Work out splits, fees, and take-home on every listing, forecast your financial year, and track tier progress — all on your device.",
+            "url": "https://commissionbuddy.app",
+            "installUrl": "https://apps.apple.com/app/id6760575848",
+            "author": { "@type": "Person", "name": "Scott Breen" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Yakable",
+            "operatingSystem": "iOS, iPadOS",
+            "applicationCategory": "LifestyleApplication",
+            "description": "Restaurant-style conversation courses for dates, after-work drinks, and dinner with mates. One question at a time — no awkward silences, no phones-out scrolling.",
+            "url": "https://yakable.app",
+            "author": { "@type": "Person", "name": "Scott Breen" }
+          }
+        }
+      ]
     }
   ]
   </script>
@@ -266,7 +330,7 @@
                 <use href="#score-buddy-icon"/>
               </svg>
             </div>
-            <span class="app-badge app-badge-live">Live on App Store</span>
+            <span class="app-badge app-badge-live">Live on the App Store</span>
           </div>
 
           <div class="app-card-body">
@@ -298,13 +362,45 @@
             <div class="app-card-icon">
               <img src="images/tzbuddy-icon.png" width="56" height="56" alt="Time Zone Buddy app icon" style="border-radius:12px;" />
             </div>
-            <span class="app-badge app-badge-live">Live in the App Store</span>
+            <span class="app-badge app-badge-live">Live on the App Store</span>
           </div>
 
           <div class="app-card-body">
             <h3 class="app-card-title">Time Zone Buddy</h3>
             <p class="app-card-subtitle">for iOS</p>
             <p class="app-card-desc">World clocks, meeting overlap finder, and work-hours awareness — beautifully at a glance for people who work across time zones.</p>
+          </div>
+
+          <div class="app-card-footer">
+            <span class="app-card-link">
+              Visit site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </span>
+          </div>
+
+        </a>
+
+        <!-- ── Commission Buddy — Live ── -->
+        <a href="https://commissionbuddy.app"
+          class="app-card app-card-live apps-anim"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="Commission Buddy — visit the app site">
+
+          <div class="app-card-header">
+            <div class="app-card-icon">
+              <img src="images/commissionbuddy-icon.svg" width="56" height="56" alt="Commission Buddy app icon" style="border-radius:12px;" />
+            </div>
+            <span class="app-badge app-badge-live">Live on the App Store</span>
+          </div>
+
+          <div class="app-card-body">
+            <h3 class="app-card-title">Commission Buddy</h3>
+            <p class="app-card-subtitle">for iOS</p>
+            <p class="app-card-desc">The privacy-first real estate commission calculator and income tracker. Work out splits, fees, and take-home on every listing, forecast your financial year, and track tier progress — all on your device.</p>
           </div>
 
           <div class="app-card-footer">
@@ -330,7 +426,7 @@
             <div class="app-card-icon">
               <img src="images/yakable-icon.png" width="56" height="56" alt="Yakable app icon" style="border-radius:12px;" />
             </div>
-            <span class="app-badge app-badge-soon">Coming Soon</span>
+            <span class="app-badge app-badge-live">Live on the App Store</span>
           </div>
 
           <div class="app-card-body">
@@ -382,6 +478,8 @@
 
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="/scorebuddyforphase10/">Score Buddy</a>
+        <a href="https://tzbuddy.app" target="_blank" rel="noopener noreferrer">Time Zone Buddy</a>
+        <a href="https://commissionbuddy.app" target="_blank" rel="noopener noreferrer">Commission Buddy</a>
       </nav>
 
       <p class="footer-copy">© 2026 Scott Breen. All rights reserved.</p>
