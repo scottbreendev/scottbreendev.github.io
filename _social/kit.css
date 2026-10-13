@@ -701,3 +701,99 @@ html.guides .avatar::after {
 
 .photo-post .overline { color: var(--hi); }
 .photo-post .headline { margin-top: 20px; text-shadow: 0 2px 24px rgba(14, 10, 28, 0.45); }
+
+
+/* === Story versions of the posts =================================
+   story-brisbane (photo), story-family, and the two launch stories.
+   The launch ones reuse the 06 Story rules as they are. */
+.photo-story {
+  --fg: #FFFFFF;  --soft: rgba(255, 255, 255, 0.86);  --hi: #E4D6FF;
+  background: #1B1430;
+}
+
+/* One scrim darkens the top (headline) and the bottom (cue and sticker) */
+.photo-story .scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(14, 10, 28, 0.82) 0%, rgba(14, 10, 28, 0.5) 24%, transparent 42%,
+    transparent 56%, rgba(14, 10, 28, 0.62) 74%, rgba(14, 10, 28, 0.85) 100%);
+}
+
+.photo-story .safe,
+.family-story .safe { bottom: 250px; }          /* nothing below y 1670 */
+
+.photo-story .overline { margin-top: 56px; color: var(--hi); }
+.photo-story .headline { margin-top: 20px; text-shadow: 0 2px 24px rgba(14, 10, 28, 0.45); }
+.photo-story .fill { flex: 1; }
+.photo-story .cue { text-shadow: 0 2px 18px rgba(14, 10, 28, 0.7); }
+.photo-story .sticker-slot,
+.family-story .sticker-slot { margin-bottom: 0; }
+
+.family-story .worlds { margin-top: 44px; }
+.family-story .world .icon { --s: 100px; }
+
+
+
+/* === App intros ==================================================
+   intro-<app>.html (the spotlight stencil plus a "where it runs" line) and
+   story-intro-<app>.html (the story stencil). One pair per app. */
+.intro .overline { white-space: nowrap; }
+
+.intro .platforms {
+  margin-top: 26px;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--hi);
+}
+
+/* Yakable has no screenshot in the kit, so its visual is two question cards */
+.yak-stack {
+  position: relative;
+  flex-shrink: 0;
+  width: 456px;
+  height: 680px;
+}
+
+.yak-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 34px 30px 36px;
+  text-align: center;
+  color: #F5F5F7;
+  border-radius: 36px;
+  box-shadow: 0 40px 60px -30px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.07);
+}
+
+.yak-card-back  { left: 46px; top: 24px;  width: 400px; background: #2C2C30; rotate: 6deg; }
+.yak-card-front { left: 0;    top: 318px; width: 424px; background: #232327; rotate: -3deg; }
+
+.yak-chip {
+  padding: 6px 18px;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FF8A6B;
+  border: 2px solid rgba(255, 110, 120, 0.7);
+  border-radius: 999px;
+}
+
+.yak-q { font-size: 34px; font-weight: 600; line-height: 1.25; }
+
+.yak-btns { display: flex; gap: 12px; width: 100%; margin-top: 10px; }
+.yak-btns span { flex: 1; padding: 16px 6px; font-size: 22px; font-weight: 600; border-radius: 18px; background: rgba(123, 63, 228, 0.32); }
+.yak-btns span:last-child { background: rgba(255, 138, 61, 0.3); }
+
+.story .stage .yak-stack {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  margin-left: -228px;
+  transform: scale(1.3);
+  transform-origin: top center;
+}

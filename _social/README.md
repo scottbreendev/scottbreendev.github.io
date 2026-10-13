@@ -130,3 +130,17 @@ write the caption beside it. `out/` is git-ignored.
 over the bottom; it works as a feed post or a carousel cover. The photo is a 1080×1350 JPEG in
 `assets/`. Before a photo goes in, check it for number plates, faces, street signs and shop names,
 crop them out rather than blurring, and strip the metadata (iPhone photos carry the location).
+
+## Story versions of the posts
+
+Each launch post has a 1080×1920 story twin: `story-brisbane.html` (photo), `story-family.html`,
+`story-weekendbuddy.html` and `story-tzbuddy-mac.html`. They follow the same rules as `story.html`:
+copy inside y 250–1670, and an empty band under the cue line for the sticker. Post the feed post
+first, then share the story with a link sticker dropped on that band.
+
+## App intros
+
+`intro-<app>.html` (1080×1350) and `story-intro-<app>.html` (1080×1920) introduce one app each, in
+the site's app order: Time Zone Buddy, Weekend Buddy, Commission Buddy, Yakable, Score Buddy. The
+post is the spotlight stencil plus a "where it runs" line; the story is the story stencil. Yakable
+has no screenshot in the kit, so its visual is two question cards drawn in CSS (`.yak-stack`).

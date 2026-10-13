@@ -1231,6 +1231,13 @@ html.dark .theme-moon { display: none;  }
 }
 
 
+.contact-socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 1.75rem;
+}
+
 .contact-more {
   display: inline-flex;
   align-items: center;
