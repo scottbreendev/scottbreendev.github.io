@@ -1,0 +1,652 @@
+/* ============================================================
+   kit.css — Instagram stencils for Scott Breen / the Buddy Family
+   One stylesheet for every template in this folder. Sizes are real
+   pixels: a .post is 1080×1350, a .story / .reel is 1080×1920.
+
+   Brand tokens mirror ../css/styles.css (the website). If the site's
+   colours change, change them here too.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* ── THE HANDLE ──────────────────────────────────────────────
+     The one place the Instagram handle lives. Every template shows
+     it through <i class="handle"></i>. Change it here, re-export. */
+  --handle: "@scottbreendev";
+
+  --display: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+  --body:    'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.handle::before { content: var(--handle); }
+.handle { font-style: normal; }
+
+
+/* === Themes ======================================================
+   Put data-app="…" on the frame (or on any .world card inside it).
+   --bg        background (colour or gradient)
+   --fg        main text          --soft   secondary text
+   --hi        highlight text     --accent tag / pill fill (may be a gradient)
+   --on-accent text on the fill   --line   hairlines and outlines
+   --glow      soft colour wash   --drop   shadow colour under phones        */
+
+.frame,
+[data-app="brand"] {
+  --bg: linear-gradient(160deg, #FEFCF3 0%, #FBF1D0 55%, #EDE8D5 100%);
+  --fg: #18120A;  --soft: #604E2A;  --hi: #A87A0E;
+  --accent: #2E7050;  --on-accent: #FFFFFF;
+  --line: #E5D9B6;  --glow: #C08A14;  --drop: rgba(96, 78, 42, 0.5);
+}
+
+[data-app="brand-dark"] {
+  --bg: radial-gradient(90% 60% at 85% 100%, rgba(212, 168, 50, 0.16), transparent 70%),
+        linear-gradient(160deg, #100E08 0%, #1A1710 55%, #1E1C11 100%);
+  --fg: #F0E8CC;  --soft: #C4A96A;  --hi: #D4A832;
+  --accent: #4AA876;  --on-accent: #0B1A12;
+  --line: #3A3020;  --glow: #D4A832;  --drop: rgba(0, 0, 0, 0.8);
+}
+
+[data-app="weekend"] {
+  --bg: linear-gradient(150deg, #FDFAF5 0%, #FDEBE2 58%, #F9CFB8 100%);
+  --fg: #1F1A15;  --soft: #4A413A;  --hi: #B8421C;
+  --accent: #B8421C;  --on-accent: #FFFFFF;
+  --line: #F1D3C2;  --glow: #F26B3A;  --drop: rgba(120, 50, 20, 0.5);
+}
+
+[data-app="tz"] {
+  --bg: radial-gradient(120% 110% at 88% 6%, #1B4F86 0%, #0B1730 46%, #06081A 100%);
+  --fg: #EAF4FF;  --soft: rgba(234, 244, 255, 0.74);  --hi: #2ECAD4;
+  --accent: #2ECAD4;  --on-accent: #04222A;
+  --line: rgba(234, 244, 255, 0.2);  --glow: #2ECAD4;  --drop: rgba(0, 0, 0, 0.8);
+}
+
+[data-app="score"] {
+  --bg: linear-gradient(140deg, #1E3A8A 0%, #1D6FF0 52%, #7C3AED 100%);
+  --fg: #FFFFFF;  --soft: rgba(255, 255, 255, 0.84);  --hi: #CFE2FF;
+  --accent: #FFFFFF;  --on-accent: #1D4FD0;
+  --line: rgba(255, 255, 255, 0.28);  --glow: #7C3AED;  --drop: rgba(10, 16, 60, 0.7);
+}
+
+[data-app="commission"] {
+  --bg: radial-gradient(120% 100% at 72% 0%, #2F7A63 0%, #1E4A3E 46%, #12261F 100%);
+  --fg: #F3EFE6;  --soft: rgba(243, 239, 230, 0.76);  --hi: #CBF24F;
+  --accent: #CBF24F;  --on-accent: #14261F;
+  --line: rgba(243, 239, 230, 0.2);  --glow: #CBF24F;  --drop: rgba(0, 0, 0, 0.75);
+}
+
+[data-app="yakable"] {
+  --bg: radial-gradient(60% 50% at 8% 100%, rgba(255, 138, 61, 0.5), transparent 70%),
+        radial-gradient(70% 55% at 94% 0%, rgba(123, 63, 228, 0.6), transparent 70%),
+        radial-gradient(60% 45% at 60% 62%, rgba(255, 77, 141, 0.26), transparent 70%),
+        #18141D;
+  --fg: #F5F5F7;  --soft: rgba(245, 245, 247, 0.74);  --hi: #FF6FA3;
+  --accent: linear-gradient(90deg, #FF8A3D 0%, #FF4D8D 55%, #7B3FE4 100%);  --on-accent: #FFFFFF;
+  --line: rgba(245, 245, 247, 0.2);  --glow: #FF4D8D;  --drop: rgba(0, 0, 0, 0.8);
+}
+
+
+/* === Frames ====================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { background: #3A3A3A; }
+
+img, svg { display: block; }
+
+.frame,
+.world {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.frame {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;           /* so a watermark can sit behind the copy with z-index: -1 */
+  font-family: var(--body);
+  font-size: 38px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+.post   { width: 1080px; height: 1350px; padding: 84px; }
+.story,
+.reel   { width: 1080px; height: 1920px; }
+.avatar { width: 1080px; height: 1080px; }
+.og     { width: 1200px; height: 630px; }
+
+
+/* === Type ======================================================== */
+.headline {
+  font-family: var(--display);
+  font-weight: 800;
+  line-height: 1.03;
+  letter-spacing: -0.02em;      /* the site uses -0.035em, but at these sizes the letters collide */
+  text-wrap: balance;
+}
+
+.h-xl { font-size: 148px; }
+.h-l  { font-size: 124px; }
+.h-m  { font-size: 100px; }
+.h-s  { font-size: 80px; }
+
+.hi { color: var(--hi); }
+
+.overline {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hi);
+}
+
+.lede {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.42;
+  color: var(--soft);
+  text-wrap: pretty;
+}
+
+
+/* === Small parts ================================================= */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* App icon tile. Size with --s. */
+.icon {
+  --s: 88px;
+  flex-shrink: 0;
+  width: var(--s);
+  height: var(--s);
+  border-radius: 22.5%;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(24, 18, 10, 0.08), 0 14px 26px -14px var(--drop);
+}
+
+.icon img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Icon + app name (+ optional tag) */
+.app-id {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-family: var(--display);
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.tag {
+  flex-shrink: 0;
+  padding: 7px 18px 8px;
+  font-family: var(--body);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--on-accent);
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 36px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--on-accent);
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+.pill-ghost {
+  color: inherit;
+  background: none;
+  box-shadow: 0 0 0 2px var(--line) inset;
+}
+
+.pill svg, .cue svg {
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* The pineapple in a cream disc: the account's mark, on any background */
+.badge {
+  --s: 84px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 38%, #FFFDF4 0%, #FBF1D0 100%);
+  box-shadow: 0 0 0 2px rgba(192, 138, 20, 0.35) inset, 0 12px 22px -14px var(--drop);
+}
+
+.badge img { height: 66%; width: auto; }
+
+/* Signature: badge + "Scott Breen" + handle */
+.sig {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+.sig-text { display: flex; flex-direction: column; }
+.sig-text b { font-family: var(--display); font-size: 32px; font-weight: 700; letter-spacing: -0.02em; }
+.sig-text .handle { font-weight: 500; color: var(--soft); }
+
+.sig-rev { flex-direction: row-reverse; text-align: right; }
+
+/* Phone frame (same recipe as the website). Size with --pw. */
+.phone {
+  --pw: 400px;
+  flex-shrink: 0;
+  width: var(--pw);
+  padding: calc(var(--pw) * 0.028);
+  border-radius: calc(var(--pw) * 0.165);
+  background-color: #0C0C0E;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.14) inset,
+    0 70px 90px -50px var(--drop);
+}
+
+.phone img {
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--pw) * 0.14);
+}
+
+/* Soft colour wash behind a visual */
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--glow);
+  filter: blur(110px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Big faint pineapple, bottom-right (as on the website hero) */
+.watermark {
+  position: absolute;
+  right: -90px;
+  bottom: -150px;
+  height: 760px;
+  width: auto;
+  opacity: 0.09;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.dock { display: flex; gap: 22px; }
+
+
+/* === 01 Launch / announcement (1080×1350) ======================== */
+.launch { display: flex; flex-direction: column; }
+.launch .headline { margin-top: 46px; }
+.launch .lede { margin-top: 26px; max-width: 860px; }
+
+/* The stage takes whatever height the copy leaves and bleeds to the edges */
+.stage {
+  position: relative;
+  flex: 1;
+  margin: 52px -84px -84px;
+}
+
+.stage .phone { position: absolute; }
+.stage-phones .phone-front { --pw: 420px; left: 178px; top: 0; z-index: 1; }
+.stage-phones .phone-back  { --pw: 384px; left: 534px; top: 62px; rotate: 7deg; }
+.stage-phones .glow { left: 140px; top: 120px; width: 800px; height: 520px; }
+
+.stage-mac .mac-window {
+  position: absolute;
+  left: 176px;
+  top: 6px;
+  width: 1130px;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 60px 90px -40px rgba(0, 0, 0, 0.85);
+}
+
+.stage-mac .mac-popover {
+  position: absolute;
+  left: 60px;
+  top: 236px;
+  width: 404px;
+  height: auto;
+  filter: drop-shadow(0 30px 36px rgba(0, 0, 0, 0.55));
+}
+
+.stage-mac .glow { left: 300px; top: 60px; width: 700px; height: 420px; opacity: 0.22; }
+
+
+/* === 02 Feature spotlight (1080×1350) ============================ */
+.spotlight {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 52px;
+}
+
+.spotlight .copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.spotlight .app-id { font-size: 34px; gap: 18px; }
+.spotlight .app-id .icon { --s: 76px; }
+.spotlight .overline { margin-bottom: 22px; }
+.spotlight .lede { margin-top: 28px; font-size: 34px; }
+
+.spotlight .visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.spotlight .phone { --pw: 456px; position: relative; }
+.spotlight .glow { left: -60px; top: 22%; width: 560px; height: 620px; }
+
+
+/* === 03 Text / build-in-public (1080×1350) ======================= */
+.text-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-post .lede { margin-top: 36px; max-width: 800px; }
+
+.numeral {
+  font-family: var(--display);
+  font-size: 560px;
+  font-weight: 800;
+  line-height: 0.76;
+  letter-spacing: -0.04em;
+  color: var(--hi);
+  margin: 0 0 44px -18px;
+}
+
+
+/* === 04 Carousel (1080×1350): cover, slide, end card ============= */
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.count {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--soft);
+}
+
+.cover .headline { margin-top: 30px; }
+.cover .lede { margin-top: 30px; max-width: 640px; }
+.cover .pill { margin-top: 44px; }
+
+.cover-mark {
+  position: absolute;
+  right: -40px;
+  bottom: -70px;
+  height: 700px;
+  width: auto;
+  z-index: -1;
+  filter: drop-shadow(0 50px 50px rgba(96, 78, 42, 0.28));
+}
+
+.slide .step {
+  font-family: var(--display);
+  font-size: 200px;
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  color: var(--hi);
+  margin: 0 0 40px -8px;
+}
+
+.slide .lede { margin-top: 32px; }
+.slide .app-id { margin-top: 44px; font-size: 34px; }
+.slide .app-id .icon { --s: 76px; }
+
+.cue {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--soft);
+}
+
+.end {
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+  text-align: center;
+}
+
+.end .end-mark { height: 300px; width: auto; filter: drop-shadow(0 30px 30px rgba(96, 78, 42, 0.28)); }
+.end .lede { max-width: 760px; }
+
+.handle-pill {
+  padding: 22px 48px 26px;
+  font-family: var(--display);
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--on-accent);
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+.end .dock .icon { --s: 112px; }
+
+
+/* === 05 Meet the family (1080×1350) ============================== */
+.family {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.family .lede { margin-top: 22px; }
+
+.worlds {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  list-style: none;
+}
+
+/* One card per app, each in its own colour world */
+.world {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 0 34px 0 24px;
+  border-radius: 36px;
+  box-shadow: 0 0 0 1px rgba(24, 18, 10, 0.07) inset, 0 20px 30px -22px rgba(96, 78, 42, 0.55);
+}
+
+.world .icon { --s: 94px; }
+.world-text { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.world-text b { font-family: var(--display); font-size: 42px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
+.world-text span { font-size: 27px; font-weight: 500; line-height: 1.3; color: var(--soft); }
+
+
+/* === 06 Story (1080×1920) ======================================== */
+/* Everything that matters sits in y 250–1670; the phone runs on off the bottom. */
+.story .safe {
+  position: absolute;
+  inset: 262px 84px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.story .headline { margin-top: 44px; }
+
+.story .cue { margin-top: 44px; justify-content: center; color: var(--fg); }
+
+/* Reserved band for a link / poll / quiz sticker. Empty in the export;
+   set --sticker-h taller (≈ 320px) for a poll or quiz. */
+.sticker-slot {
+  --sticker-h: 170px;
+  flex-shrink: 0;
+  height: var(--sticker-h);
+  margin: 16px 0 40px;
+}
+
+.story .stage { margin: 0 -84px; }
+.story .stage .phone { --pw: 520px; left: 280px; top: 0; }
+.story .stage .glow { left: 190px; top: 80px; width: 700px; height: 700px; }
+
+
+/* === 07 Reel cover (1080×1920) =================================== */
+/* The profile grid shows the centre 3:4 (y 240–1680) and the feed the centre
+   4:5 (y 285–1635), so everything sits inside y 330–1604. Title on top, the
+   phones centred on y ≈ 990, the app's name under them (still above y 1470,
+   where the no-text zone starts), then the pineapple, which is not text. */
+.reel .safe {
+  position: absolute;
+  inset: 330px 84px 316px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reel .stage { margin: 34px -84px 0; flex: none; height: 750px; }
+.reel .stage .phone-front { --pw: 350px; left: 230px; top: 0; z-index: 1; }
+.reel .stage .phone-back  { --pw: 322px; left: 524px; top: 46px; rotate: 7deg; }
+.reel .stage .glow { left: 190px; top: 90px; width: 700px; height: 560px; }
+
+.reel .app-id { justify-content: center; margin-top: 24px; font-size: 36px; gap: 18px; }
+.reel .app-id .icon { --s: 68px; }
+
+.reel .sign-off {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  translate: -50% 0;
+}
+
+.reel .sign-off .badge { --s: 110px; }
+
+
+/* === 08 Profile picture (1080×1080) ============================== */
+.avatar {
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 40%, #FFFDF4 0%, #FBF1D0 52%, #F1DFA6 100%);
+}
+
+.avatar[data-app="brand-dark"] {
+  background: radial-gradient(circle at 50% 40%, #2A2415 0%, #1A1710 55%, #100E08 100%);
+}
+
+.avatar img {
+  height: 760px;
+  width: auto;
+  translate: 0 -6px;
+  filter: drop-shadow(0 34px 34px rgba(96, 78, 42, 0.3));
+}
+
+
+/* === 09 Link preview / Open Graph (1200×630) ===================== */
+.og {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 84px 0 76px;
+}
+
+.og .copy { position: relative; max-width: 740px; }
+.og .headline { font-size: 78px; }
+.og .lede { margin-top: 22px; font-size: 28px; }
+.og .dock { margin-top: 40px; gap: 14px; }
+.og .dock .icon { --s: 66px; }
+.og .og-mark { position: relative; height: 452px; width: auto; filter: drop-shadow(0 30px 30px rgba(96, 78, 42, 0.28)); }
+.og .glow { right: 20px; top: 150px; width: 420px; height: 380px; opacity: 0.2; filter: blur(90px); }
+
+
+/* === Guides ======================================================
+   Safe-zone overlays for checking a layout. Never in a real export:
+   they show only when <html class="guides"> is set, which
+   `node render.mjs --guides` does for you (into out/guides/). */
+html.guides .frame::after {
+  --no: repeating-linear-gradient(45deg, rgba(255, 0, 80, 0.55) 0 5px, rgba(255, 0, 80, 0.12) 5px 16px);
+  --edge: #00C2FF;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 99;
+  pointer-events: none;
+}
+
+/* Post: the profile grid crops 4:5 to 3:4, losing ~34px each side */
+html.guides .post::after {
+  background:
+    var(--no) 0 0 / 34px 100% no-repeat,
+    var(--no) 100% 0 / 34px 100% no-repeat;
+}
+
+/* Story: Instagram's own chrome covers the top 250 and bottom 250 */
+html.guides .story::after {
+  background:
+    var(--no) 0 0 / 100% 250px no-repeat,
+    var(--no) 0 100% / 100% 250px no-repeat;
+}
+
+html.guides .sticker-slot {
+  border: 4px dashed var(--fg);
+  border-radius: 28px;
+  display: grid;
+  place-items: center;
+}
+
+html.guides .sticker-slot::before {
+  content: "sticker goes here";
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Reel: no text in the top 220, the bottom 450, or the right 140 below y 1000.
+   Blue lines: the 3:4 grid crop (y 240 and 1680). */
+html.guides .reel::after {
+  background:
+    linear-gradient(var(--edge), var(--edge)) 0 238px / 100% 4px no-repeat,
+    linear-gradient(var(--edge), var(--edge)) 0 1678px / 100% 4px no-repeat,
+    var(--no) 0 0 / 100% 220px no-repeat,
+    var(--no) 0 100% / 100% 450px no-repeat,
+    var(--no) 100% 1000px / 140px 470px no-repeat;
+}
+
+/* Profile picture: Instagram shows the inscribed circle */
+html.guides .avatar::after {
+  background: radial-gradient(circle closest-side, transparent 99.6%, rgba(255, 0, 80, 0.4) 100%);
+}

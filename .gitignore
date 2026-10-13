@@ -1,0 +1,5 @@
+# Local preview config
+.claude/
+
+# Rendered social stencils; the finished copies live in iCloud (see _social/README.md)
+_social/out/

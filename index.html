@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scott Breen — Independent iOS Developer</title>
-  <meta name="description" content="Scott Breen, independent iOS developer. Making the Buddy family of apps — thoughtfully crafted iOS apps built for everyday moments." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Scott Breen — Independent App Developer for iPhone, iPad and Mac</title>
+  <meta name="description" content="Scott Breen, independent app developer in Brisbane, Australia. Making the Buddy family — small, focused apps for iPhone and iPad. New: Weekend Buddy is out in Australia, and Time Zone Buddy is now on Mac." />
 
   <!-- Browser chrome colour (matches light/dark page background) -->
   <meta name="theme-color" content="#FEFCF3" media="(prefers-color-scheme: light)" />
@@ -16,13 +16,13 @@
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://scottbreendev.github.io/" />
-  <meta property="og:title"       content="Scott Breen — Independent iOS Developer" />
-  <meta property="og:description" content="Making apps that become your buddy. A growing family of thoughtfully crafted iOS apps." />
+  <meta property="og:title"       content="Scott Breen — Independent App Developer" />
+  <meta property="og:description" content="Making apps that become your buddy. A growing family of small, focused apps for iPhone and iPad." />
   <meta property="og:image"       content="https://scottbreendev.github.io/images/og-image.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Scott Breen — iOS Developer" />
+  <meta name="twitter:title"       content="Scott Breen — App Developer" />
   <meta name="twitter:description" content="Making apps that become your buddy." />
   <meta name="twitter:image"       content="https://scottbreendev.github.io/images/og-image.png" />
 
@@ -32,7 +32,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- JSON-LD structured data -->
   <script type="application/ld+json">
@@ -42,22 +42,28 @@
       "@type": "Person",
       "name": "Scott Breen",
       "url": "https://scottbreendev.github.io/",
-      "jobTitle": "iOS Developer",
-      "description": "Independent iOS developer making the Buddy family of apps — thoughtfully crafted iOS apps for everyday moments.",
+      "jobTitle": "App Developer",
+      "description": "Independent app developer making the Buddy family — small, focused apps for iPhone and iPad.",
       "email": "scott.breen.dev@outlook.com",
-      "knowsAbout": ["iOS Development", "Swift", "SwiftUI", "App Store", "Phase 10"]
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brisbane",
+        "addressRegion": "QLD",
+        "addressCountry": "AU"
+      },
+      "knowsAbout": ["iOS Development", "macOS Development", "Swift", "SwiftUI", "App Store", "Phase 10"]
     },
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Scott Breen",
       "url": "https://scottbreendev.github.io/",
-      "description": "Portfolio of Scott Breen, independent iOS developer and creator of the Buddy family of apps."
+      "description": "Portfolio of Scott Breen, independent app developer and creator of the Buddy family of apps."
     },
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "The Buddy Family of iOS apps",
+      "name": "The Buddy Family of apps",
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
         {
@@ -65,11 +71,12 @@
           "position": 1,
           "item": {
             "@type": "SoftwareApplication",
-            "name": "Score Buddy for Phase 10",
+            "name": "Weekend Buddy",
             "operatingSystem": "iOS, iPadOS",
-            "applicationCategory": "GameApplication",
-            "description": "The Phase 10 score tracker. Round-by-round scoring, skip card analytics, live rankings, and deep stats for serious game night players.",
-            "url": "https://scottbreendev.github.io/scorebuddyforphase10/",
+            "applicationCategory": "ProductivityApplication",
+            "description": "Dinners, parties, trips and birthdays, laid out weekend by weekend, with the working week left out. Works with the calendars you already have. No account. Available on the App Store in Australia.",
+            "url": "https://weekendbuddy.app",
+            "installUrl": "https://apps.apple.com/au/app/weekend-buddy/id6808475914",
             "author": { "@type": "Person", "name": "Scott Breen" }
           }
         },
@@ -79,16 +86,31 @@
           "item": {
             "@type": "SoftwareApplication",
             "name": "Time Zone Buddy",
-            "operatingSystem": "iOS, iPadOS",
+            "operatingSystem": "iOS, iPadOS, macOS, watchOS",
             "applicationCategory": "BusinessApplication",
-            "description": "World clocks, meeting overlap finder, and work-hours awareness — beautifully at a glance for people who work across time zones.",
+            "description": "World clocks, meeting overlap finder, and work-hours awareness — beautifully at a glance for people who work across time zones. On iPhone, iPad, Apple Watch and Mac.",
             "url": "https://tzbuddy.app",
+            "installUrl": "https://apps.apple.com/app/time-zone-buddy/id6760805989",
             "author": { "@type": "Person", "name": "Scott Breen" }
           }
         },
         {
           "@type": "ListItem",
           "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Score Buddy for Phase 10",
+            "operatingSystem": "iOS, iPadOS",
+            "applicationCategory": "GameApplication",
+            "description": "The Phase 10 score tracker. Round-by-round scoring, skip card analytics, live rankings, and deep stats for serious game night players.",
+            "url": "https://scottbreendev.github.io/scorebuddyforphase10/",
+            "installUrl": "https://apps.apple.com/app/score-buddy-for-phase-10/id6760017130",
+            "author": { "@type": "Person", "name": "Scott Breen" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
           "item": {
             "@type": "SoftwareApplication",
             "name": "Commission Buddy",
@@ -102,7 +124,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 4,
+          "position": 5,
           "item": {
             "@type": "SoftwareApplication",
             "name": "Yakable",
@@ -110,19 +132,7 @@
             "applicationCategory": "LifestyleApplication",
             "description": "Restaurant-style conversation courses for dates, after-work drinks, and dinner with mates. One question at a time — no awkward silences, no phones-out scrolling.",
             "url": "https://yakable.app",
-            "author": { "@type": "Person", "name": "Scott Breen" }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "Weekend Buddy",
-            "operatingSystem": "iOS, iPadOS",
-            "applicationCategory": "ProductivityApplication",
-            "description": "Dinners, parties, trips and birthdays, laid out weekend by weekend, with the working week left out. Works with the calendars you already have. No account.",
-            "url": "https://weekendbuddy.app",
+            "installUrl": "https://apps.apple.com/app/yakable/id6760983071",
             "author": { "@type": "Person", "name": "Scott Breen" }
           }
         }
@@ -131,31 +141,11 @@
   ]
   </script>
 
-  <!-- Tailwind Play CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          colors: {
-            brand:  'var(--color-brand)',
-            accent: 'var(--color-accent)',
-          }
-        }
-      }
-    }
-  </script>
-
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
 
   <!-- Prevent flash of dark background before CSS loads -->
   <style>html.dark { background-color: #100E08; }</style>
-
-  <!-- Alpine.js (deferred) -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 
   <!-- GSAP + ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -182,10 +172,16 @@
 
 <body>
 
-  <!-- ── Reusable pineapple SVG symbol ──────────────────────────── -->
-  <!-- Defined once here; referenced everywhere with <use href="#pineapple"> -->
+  <!-- ── Reusable SVG symbols ───────────────────────────────────── -->
+  <!-- Defined once here; referenced everywhere with <use href="#…"> -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
+      <clipPath id="pine-clip"><path d="M40 37 C58 37 67 49 67 69 C67 90 58 102 40 102 C22 102 13 90 13 69 C13 49 22 37 40 37 Z"/></clipPath>
+      <radialGradient id="pine-shade" cx="0.3" cy="0.25" r="0.95">
+        <stop offset="0.45" stop-color="#3D2600" stop-opacity="0"/>
+        <stop offset="1" stop-color="#3D2600" stop-opacity="0.32"/>
+      </radialGradient>
+
       <symbol id="score-buddy-icon" viewBox="0 0 1024 1024">
         <defs>
           <linearGradient id="sb-fg" x1="0" y1="0" x2="1" y2="1">
@@ -199,35 +195,28 @@
         <text x="512" y="610.06" font-family="-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="258.05" font-weight="700" text-anchor="middle" fill="white">10</text>
       </symbol>
 
-      <symbol id="pineapple" viewBox="0 0 40 52" fill="none">
-        <!-- Crown — 5 leaves (hardcoded green — always green regardless of context) -->
-        <!-- Far left fan leaf -->
-        <path d="M11 19 C9.5 16 8.5 12.5 9 10 C11.5 12 14 15.5 17 19Z" fill="#2D7A52"/>
-        <!-- Left diagonal leaf -->
-        <path d="M14 19 C13.5 13.5 14 8 15.5 4 C17.5 8 18 14 19.5 19Z" fill="#2E7050"/>
-        <!-- Centre leaf (tallest) -->
-        <path d="M17 19 C17.5 12 19 5 20 1.5 C21 5 22.5 12 23 19Z" fill="#357A44"/>
-        <!-- Right diagonal leaf -->
-        <path d="M26 19 C26.5 13.5 26 8 24.5 4 C22.5 8 22 14 20.5 19Z" fill="#2E7050"/>
-        <!-- Far right fan leaf -->
-        <path d="M29 19 C30.5 16 31.5 12.5 31 10 C28.5 12 26 15.5 23 19Z" fill="#2D7A52"/>
-        <!-- Body — currentColor (gold in light; lighter gold in dark via CSS token) -->
-        <ellipse cx="20" cy="34" rx="12" ry="16" fill="currentColor" opacity="0.92"/>
-        <!-- Depth shading -->
-        <ellipse cx="20" cy="42" rx="9" ry="8" fill="currentColor" opacity="0.2"/>
-        <!-- Highlight -->
-        <ellipse cx="15.5" cy="26" rx="4" ry="3.5" fill="white" opacity="0.14" transform="rotate(-20 15.5 26)"/>
-        <!-- Scale texture — horizontal arcs -->
-        <path d="M9.5 28 Q20 25.5 30.5 28" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.22"/>
-        <path d="M8.5 34 Q20 31.5 31.5 34" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.22"/>
-        <path d="M9.5 40 Q20 37.5 30.5 40" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.22"/>
-        <path d="M12.5 46 Q20 43.5 27.5 46" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.18"/>
-        <!-- Scale texture — vertical arcs -->
-        <path d="M13.5 20.5 Q13 34 14.5 47.5" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.18"/>
-        <path d="M17 18.5 Q16.5 34 17.5 49.5" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.18"/>
-        <path d="M20 18 Q20.5 34 20 50" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.18"/>
-        <path d="M23 18.5 Q23.5 34 22.5 49.5" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.18"/>
-        <path d="M26.5 20.5 Q27 34 25.5 47.5" stroke="currentColor" stroke-width="0.55" fill="none" opacity="0.18"/>
+      <symbol id="pineapple" viewBox="0 0 80 104" fill="none">
+        <!-- Body takes currentColor (gold in light; brighter gold in dark via CSS token).
+             Leaves are always green. -->
+        <!-- Crown: five leaves, back to front -->
+        <path d="M31 43 C20 37 11 28 8 16 C19 19 29 28 37 41 Z" fill="#1F6B45"/>
+        <path d="M49 43 C60 37 69 28 72 16 C61 19 51 28 43 41 Z" fill="#1F6B45"/>
+        <path d="M33 43 C25 31 25 17 28 6 C36 15 41 28 42 42 Z" fill="#2A8556"/>
+        <path d="M47 43 C55 31 55 17 52 6 C44 15 39 28 38 42 Z" fill="#2A8556"/>
+        <path d="M33.5 44 C32 28 35.5 12 40 1 C44.5 12 48 28 46.5 44 Z" fill="#3BA36A"/>
+        <!-- Body, then a diamond lattice clipped to it, then light and shade -->
+        <path d="M40 37 C58 37 67 49 67 69 C67 90 58 102 40 102 C22 102 13 90 13 69 C13 49 22 37 40 37 Z" fill="currentColor"/>
+        <g clip-path="url(#pine-clip)">
+          <ellipse cx="29" cy="56" rx="7" ry="12" fill="#FFFFFF" opacity="0.26" transform="rotate(-16 29 56)"/>
+          <path d="M-42 37 L8.7 102 M122 37 L71.3 102 M-26 37 L24.7 102 M106 37 L55.3 102 M-10 37 L40.7 102 M90 37 L39.3 102 M6 37 L56.7 102 M74 37 L23.3 102 M22 37 L72.7 102 M58 37 L7.3 102 M38 37 L88.7 102 M42 37 L-8.7 102 M54 37 L104.7 102 M26 37 L-24.7 102 M70 37 L120.7 102 M10 37 L-40.7 102" stroke="#6B4300" stroke-opacity="0.3" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+          <rect x="13" y="37" width="54" height="65" fill="url(#pine-shade)"/>
+        </g>
+      </symbol>
+
+      <symbol id="arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
       </symbol>
     </defs>
   </svg>
@@ -246,19 +235,14 @@
 
       <div class="nav-right">
         <nav class="nav-links" aria-label="Page sections">
+          <a href="#new" class="nav-link">What's new</a>
           <a href="#apps" class="nav-link">Apps</a>
           <a href="#contact" class="nav-link">Contact</a>
         </nav>
-        <!-- Theme toggle — x-data creates an Alpine scope for $store access -->
-        <button
-          x-data
-          @click="$store.theme.toggle()"
-          :aria-label="$store.theme.dark ? 'Switch to light mode' : 'Switch to dark mode'"
-          class="theme-btn">
-          <!-- Sun icon — shown in dark mode (also CSS .theme-sun fallback before Alpine) -->
+        <button id="theme-btn" type="button" class="theme-btn" aria-label="Switch to dark mode">
+          <!-- Sun icon — shown in dark mode -->
           <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            x-show="$store.theme.dark" aria-hidden="true">
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="5"/>
             <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
             <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
@@ -267,8 +251,7 @@
           </svg>
           <!-- Moon icon — shown in light mode -->
           <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            x-show="!$store.theme.dark" aria-hidden="true">
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
         </button>
@@ -279,7 +262,11 @@
 
 
   <!-- ── Hero ───────────────────────────────────────────────────── -->
-  <section class="hero">
+  <!-- data-active is set by app.js as the headline cycles through the apps;
+       it drives the colour of the glow behind the dock. -->
+  <section class="hero" data-active="">
+
+    <div class="hero-glow" aria-hidden="true"></div>
 
     <!-- Large faint pineapple watermark, bottom-right -->
     <div class="hero-watermark" aria-hidden="true">
@@ -288,33 +275,128 @@
 
     <div class="hero-content">
 
-      <!-- Brand mark -->
-      <div class="hero-icon-wrap">
-        <svg class="hero-pineapple" viewBox="0 0 40 52" role="img" aria-label="Pineapple — Scott Breen brand mark">
-          <use href="#pineapple"/>
-        </svg>
+      <!-- Latest news. With motion on, app.js shows one chip at a time, in step with
+           the headline; otherwise both chips are shown. -->
+      <div class="hero-news hero-anim">
+        <a href="#news-weekend" class="news-chip is-current" data-app="weekend">
+          <img class="news-chip-icon" src="images/icons/weekendbuddy.webp" width="28" height="28" alt="" />
+          <span class="news-chip-text"><b>New</b> Weekend Buddy is out in Australia</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
+        </a>
+        <a href="#news-mac" class="news-chip" data-app="tz">
+          <img class="news-chip-icon" src="images/icons/tzbuddy.webp" width="28" height="28" alt="" />
+          <span class="news-chip-text"><b>New</b> Time Zone Buddy is now on Mac</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
+        </a>
       </div>
 
-      <p class="hero-overline hero-anim">Independent iOS Developer</p>
-
-      <h1 class="hero-headline hero-anim">
-        Making apps that become<br>
-        <em>your buddy.</em>
+      <!-- The middle line cycles through each app. Without JS (or with reduced
+           motion) it stays on "everyday". -->
+      <h1 class="hero-headline hero-anim" aria-label="Apps that become your everyday buddy.">
+        <span aria-hidden="true">Apps that become your</span>
+        <span class="rotor" aria-hidden="true">
+          <span class="rotor-word is-current" data-app="">everyday</span>
+          <span class="rotor-word" data-app="weekend">weekend</span>
+          <span class="rotor-word" data-app="score">game night</span>
+          <span class="rotor-word" data-app="tz">time zone</span>
+          <span class="rotor-word" data-app="commission">commission</span>
+          <span class="rotor-word" data-app="yakable">conversation</span>
+        </span>
+        <span aria-hidden="true">buddy.</span>
       </h1>
 
       <p class="hero-sub hero-anim">
-        A growing family of thoughtfully crafted iOS apps —
-        built to make everyday moments a little better.
+        Five small apps for iPhone and iPad, each built to do one everyday job
+        really well. Made in Brisbane by Scott Breen, an independent developer.
       </p>
 
-      <a href="#apps" class="hero-scroll-cta hero-anim" aria-label="Scroll down to see the apps">
-        See the apps
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="12" y1="5" x2="12" y2="19"/>
-          <polyline points="19 12 12 19 5 12"/>
-        </svg>
-      </a>
+      <!-- App dock — each icon jumps to that app's card -->
+      <nav class="dock" aria-label="The apps">
+        <a href="#weekend-buddy" class="dock-item" data-app="weekend" aria-label="Weekend Buddy"><span class="dock-tile"><img src="images/icons/weekendbuddy.webp" width="64" height="64" alt="" /></span></a>
+        <a href="#score-buddy" class="dock-item" data-app="score" aria-label="Score Buddy for Phase 10"><span class="dock-tile icon-score"><svg viewBox="0 0 1024 1024" aria-hidden="true"><use href="#score-buddy-icon"/></svg></span></a>
+        <a href="#time-zone-buddy" class="dock-item" data-app="tz" aria-label="Time Zone Buddy"><span class="dock-tile"><img src="images/icons/tzbuddy.webp" width="64" height="64" alt="" /></span></a>
+        <a href="#commission-buddy" class="dock-item" data-app="commission" aria-label="Commission Buddy"><span class="dock-tile"><img src="images/commissionbuddy-icon.svg" width="64" height="64" alt="" /></span></a>
+        <a href="#yakable" class="dock-item" data-app="yakable" aria-label="Yakable"><span class="dock-tile"><img src="images/icons/yakable.webp" width="64" height="64" alt="" /></span></a>
+      </nav>
+
+      <p class="dock-caption hero-anim" aria-hidden="true">
+        <span id="dock-caption-text">The Buddy Family</span>
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ── What's new ─────────────────────────────────────────────── -->
+  <section id="new" class="news-section">
+    <div class="section-inner">
+
+      <div class="section-header">
+        <p class="section-label">What's new · October 2026</p>
+        <h2 class="section-title">Two fresh arrivals</h2>
+      </div>
+
+      <!-- ── Time Zone Buddy on Mac ── -->
+      <article id="news-mac" class="news-card news-tz" data-app="tz">
+        <div class="news-copy">
+          <p class="news-eyebrow"><span class="news-tag">New</span> Time Zone Buddy</p>
+          <h3 class="news-title">Now on Mac.</h3>
+          <p class="news-desc">
+            Your world clocks and meeting planner in a proper Mac app, with a menu bar
+            item that keeps everyone's working hours a click away. Already own it on
+            iPhone? Your purchases carry over.
+          </p>
+          <div class="news-actions">
+            <a class="btn btn-solid"
+              href="https://apps.apple.com/app/apple-store/id6760805989?pt=128618011&amp;ct=devsite-mac&amp;mt=8"
+              target="_blank" rel="noopener noreferrer">Get it on the Mac App Store</a>
+            <a class="btn btn-ghost" href="https://tzbuddy.app" target="_blank" rel="noopener noreferrer">
+              tzbuddy.app
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
+            </a>
+          </div>
+          <p class="news-fine">Requires macOS 26.2 or later. Also on iPhone, iPad and Apple Watch.</p>
+        </div>
+
+        <div class="news-visual news-visual-mac" aria-hidden="true">
+          <img class="mac-window" src="images/shots/tzbuddy-mac-light.webp" width="1800" height="1125"
+            alt="" loading="lazy" />
+          <img class="mac-popover" src="images/shots/tzbuddy-menubar.webp" width="732" height="876"
+            alt="" loading="lazy" />
+        </div>
+      </article>
+
+      <!-- ── Weekend Buddy in Australia ── -->
+      <article id="news-weekend" class="news-card news-wb" data-app="weekend">
+        <div class="news-copy">
+          <p class="news-eyebrow"><span class="news-tag">New</span> Weekend Buddy</p>
+          <h3 class="news-title">Out now in Australia.</h3>
+          <p class="news-desc">
+            Dinners, parties, trips and birthdays, laid out weekend by weekend, with the
+            working week left out. It works with the calendars you already have, and
+            there's no account to set up.
+          </p>
+          <div class="news-actions">
+            <a class="btn btn-solid"
+              href="https://apps.apple.com/au/app/weekend-buddy/id6808475914?pt=128618011&amp;ct=devsite&amp;mt=8"
+              target="_blank" rel="noopener noreferrer">Get it on the App Store</a>
+            <a class="btn btn-ghost" href="https://weekendbuddy.app" target="_blank" rel="noopener noreferrer">
+              weekendbuddy.app
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
+            </a>
+          </div>
+          <p class="news-fine">On the Australian App Store, for iPhone and iPad.</p>
+        </div>
+
+        <div class="news-visual news-visual-phones" aria-hidden="true">
+          <div class="phone phone-back">
+            <img src="images/shots/weekendbuddy-widgets.webp" width="600" height="1304" alt="" loading="lazy" />
+          </div>
+          <div class="phone phone-front">
+            <img src="images/shots/weekendbuddy-weekends.webp" width="600" height="1304" alt="" loading="lazy" />
+          </div>
+        </div>
+      </article>
 
     </div>
   </section>
@@ -326,175 +408,247 @@
 
       <div class="section-header">
         <p class="section-label">Apps</p>
-        <h2 class="section-title apps-anim">The Buddy Family</h2>
-        <p class="section-sub apps-anim">Every app does one thing, and does it really well.</p>
+        <h2 class="section-title">The Buddy Family</h2>
+        <p class="section-sub">Every app does one thing, and does it really well.</p>
       </div>
 
       <div class="apps-grid">
 
-        <!-- ── Score Buddy for Phase 10 — Live ── -->
-        <a href="/scorebuddyforphase10/"
-          class="app-card app-card-live apps-anim"
-          aria-label="Score Buddy for Phase 10 — visit the app site">
-
-          <div class="app-card-header">
-            <div class="app-card-icon">
-              <svg viewBox="0 0 1024 1024" width="56" height="56" aria-label="Score Buddy for Phase 10 app icon" role="img">
-                <use href="#score-buddy-icon"/>
-              </svg>
+        <!-- ── Weekend Buddy ── -->
+        <article id="weekend-buddy" class="app-card app-weekend" data-app="weekend">
+          <a class="app-stage" href="https://weekendbuddy.app" target="_blank" rel="noopener noreferrer"
+            tabindex="-1" aria-hidden="true">
+            <div class="phone">
+              <img src="images/shots/weekendbuddy-weekends.webp" width="600" height="1304" alt="" loading="lazy" />
             </div>
-            <span class="app-badge app-badge-live">Live on the App Store</span>
-          </div>
-
-          <div class="app-card-body">
-            <h3 class="app-card-title">Score Buddy</h3>
-            <p class="app-card-subtitle">for Phase 10</p>
-            <p class="app-card-desc">The Phase 10 score tracker. Round-by-round scoring, skip card analytics, live rankings, and deep stats for serious game night players.</p>
-          </div>
-
-          <div class="app-card-footer">
-            <span class="app-card-link">
-              Visit site
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
-
-        </a>
-
-        <!-- ── Time Zone Buddy — Live ── -->
-        <a href="https://tzbuddy.app"
-          class="app-card app-card-live apps-anim"
-          target="_blank" rel="noopener noreferrer"
-          aria-label="Time Zone Buddy — visit the app site">
-
-          <div class="app-card-header">
-            <div class="app-card-icon">
-              <img src="images/tzbuddy-icon.png" width="56" height="56" alt="Time Zone Buddy app icon" style="border-radius:12px;" />
+          </a>
+          <div class="app-body">
+            <div class="app-head">
+              <div class="app-icon">
+                <img src="images/icons/weekendbuddy.webp" width="52" height="52" alt="Weekend Buddy app icon" />
+              </div>
+              <div>
+                <h3 class="app-title">Weekend Buddy</h3>
+                <p class="app-tagline">Your weekends, at a glance</p>
+              </div>
             </div>
-            <span class="app-badge app-badge-live">Live on the App Store</span>
-          </div>
-
-          <div class="app-card-body">
-            <h3 class="app-card-title">Time Zone Buddy</h3>
-            <p class="app-card-subtitle">for iOS</p>
-            <p class="app-card-desc">World clocks, meeting overlap finder, and work-hours awareness — beautifully at a glance for people who work across time zones.</p>
-          </div>
-
-          <div class="app-card-footer">
-            <span class="app-card-link">
-              Visit site
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
-
-        </a>
-
-        <!-- ── Commission Buddy — Live ── -->
-        <a href="https://commissionbuddy.app"
-          class="app-card app-card-live apps-anim"
-          target="_blank" rel="noopener noreferrer"
-          aria-label="Commission Buddy — visit the app site">
-
-          <div class="app-card-header">
-            <div class="app-card-icon">
-              <img src="images/commissionbuddy-icon.svg" width="56" height="56" alt="Commission Buddy app icon" style="border-radius:12px;" />
+            <p class="app-desc">Dinners, parties, trips and birthdays, laid out weekend by weekend, with the working week left out. Works with the calendars you already have. No account.</p>
+            <ul class="chips" aria-label="Available on">
+              <li>iPhone</li><li>iPad</li><li class="chip-new">New in Australia</li>
+            </ul>
+            <div class="app-links">
+              <a class="app-link app-link-store"
+                href="https://apps.apple.com/au/app/weekend-buddy/id6808475914?pt=128618011&amp;ct=devsite&amp;mt=8"
+                target="_blank" rel="noopener noreferrer" aria-label="Weekend Buddy on the App Store">App Store</a>
+              <a class="app-link" href="https://weekendbuddy.app" target="_blank" rel="noopener noreferrer"
+                aria-label="Weekend Buddy website">
+                Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
+              </a>
             </div>
-            <span class="app-badge app-badge-live">Live on the App Store</span>
           </div>
+        </article>
 
-          <div class="app-card-body">
-            <h3 class="app-card-title">Commission Buddy</h3>
-            <p class="app-card-subtitle">for iOS</p>
-            <p class="app-card-desc">The privacy-first real estate commission calculator and income tracker. Work out splits, fees, and take-home on every listing, forecast your financial year, and track tier progress — all on your device.</p>
-          </div>
-
-          <div class="app-card-footer">
-            <span class="app-card-link">
-              Visit site
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
-
-        </a>
-
-        <!-- ── Yakable — Coming Soon ── -->
-        <a href="https://yakable.app"
-          class="app-card app-card-live apps-anim"
-          target="_blank" rel="noopener noreferrer"
-          aria-label="Yakable — visit the app site">
-
-          <div class="app-card-header">
-            <div class="app-card-icon">
-              <img src="images/yakable-icon.png" width="56" height="56" alt="Yakable app icon" style="border-radius:12px;" />
+        <!-- ── Time Zone Buddy ── -->
+        <article id="time-zone-buddy" class="app-card app-tz" data-app="tz">
+          <a class="app-stage" href="https://tzbuddy.app" target="_blank" rel="noopener noreferrer"
+            tabindex="-1" aria-hidden="true">
+            <div class="phone">
+              <img src="images/shots/tzbuddy-iphone.webp" width="600" height="1304" alt="" loading="lazy" />
             </div>
-            <span class="app-badge app-badge-live">Live on the App Store</span>
-          </div>
-
-          <div class="app-card-body">
-            <h3 class="app-card-title">Yakable</h3>
-            <p class="app-card-subtitle">Grab the convo by the horns</p>
-            <p class="app-card-desc">Restaurant-style conversation courses for dates, after-work drinks, and dinner with mates. One question at a time — no awkward silences, no phones-out scrolling.</p>
-          </div>
-
-          <div class="app-card-footer">
-            <span class="app-card-link">
-              Visit site
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
-
-        </a>
-
-        <!-- ── Weekend Buddy — Coming Soon ── -->
-        <a href="https://weekendbuddy.app"
-          class="app-card app-card-live apps-anim"
-          target="_blank" rel="noopener noreferrer"
-          aria-label="Weekend Buddy — visit the app site">
-
-          <div class="app-card-header">
-            <div class="app-card-icon">
-              <img src="images/weekendbuddy-icon.png" width="56" height="56" alt="Weekend Buddy app icon" style="border-radius:12px;" />
+          </a>
+          <div class="app-body">
+            <div class="app-head">
+              <div class="app-icon">
+                <img src="images/icons/tzbuddy.webp" width="52" height="52" alt="Time Zone Buddy app icon" />
+              </div>
+              <div>
+                <h3 class="app-title">Time Zone Buddy</h3>
+                <p class="app-tagline">World clocks and meeting planner</p>
+              </div>
             </div>
-            <span class="app-badge app-badge-soon">Coming soon</span>
+            <p class="app-desc">World clocks, meeting overlap finder, and work-hours awareness — beautifully at a glance for people who work across time zones.</p>
+            <ul class="chips" aria-label="Available on">
+              <li>iPhone</li><li>iPad</li><li>Apple Watch</li><li class="chip-new">New on Mac</li>
+            </ul>
+            <div class="app-links">
+              <a class="app-link app-link-store"
+                href="https://apps.apple.com/app/apple-store/id6760805989?pt=128618011&amp;ct=devsite&amp;mt=8"
+                target="_blank" rel="noopener noreferrer" aria-label="Time Zone Buddy on the App Store">App Store</a>
+              <a class="app-link" href="https://tzbuddy.app" target="_blank" rel="noopener noreferrer"
+                aria-label="Time Zone Buddy website">
+                Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
+              </a>
+            </div>
           </div>
+        </article>
 
-          <div class="app-card-body">
-            <h3 class="app-card-title">Weekend Buddy</h3>
-            <p class="app-card-subtitle">Your weekends, at a glance</p>
-            <p class="app-card-desc">Dinners, parties, trips and birthdays, laid out weekend by weekend, with the working week left out. Works with the calendars you already have. No account.</p>
+        <!-- ── Score Buddy for Phase 10 ── -->
+        <article id="score-buddy" class="app-card app-score" data-app="score">
+          <a class="app-stage" href="/scorebuddyforphase10/" tabindex="-1" aria-hidden="true">
+            <div class="phone">
+              <img src="images/shots/scorebuddy-home.webp" width="600" height="1304" alt="" loading="lazy" />
+            </div>
+          </a>
+          <div class="app-body">
+            <div class="app-head">
+              <div class="app-icon icon-score">
+                <svg viewBox="0 0 1024 1024" width="52" height="52" aria-label="Score Buddy for Phase 10 app icon" role="img">
+                  <use href="#score-buddy-icon"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="app-title">Score Buddy</h3>
+                <p class="app-tagline">for Phase 10</p>
+              </div>
+            </div>
+            <p class="app-desc">The Phase 10 score tracker. Round-by-round scoring, skip card analytics, live rankings, and deep stats for serious game night players.</p>
+            <ul class="chips" aria-label="Available on">
+              <li>iPhone</li><li>iPad</li>
+            </ul>
+            <div class="app-links">
+              <a class="app-link app-link-store"
+                href="https://apps.apple.com/app/apple-store/id6760017130?pt=128618011&amp;ct=devsite&amp;mt=8"
+                target="_blank" rel="noopener noreferrer" aria-label="Score Buddy for Phase 10 on the App Store">App Store</a>
+              <a class="app-link" href="/scorebuddyforphase10/" aria-label="Score Buddy for Phase 10 website">
+                Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
+              </a>
+            </div>
           </div>
+        </article>
 
-          <div class="app-card-footer">
-            <span class="app-card-link">
-              Visit site
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
+        <!-- ── Commission Buddy ── -->
+        <article id="commission-buddy" class="app-card app-commission" data-app="commission">
+          <a class="app-stage" href="https://commissionbuddy.app" target="_blank" rel="noopener noreferrer"
+            tabindex="-1" aria-hidden="true">
+            <div class="phone">
+              <img src="images/shots/commissionbuddy-overview.webp" width="720" height="1564" alt="" loading="lazy" />
+            </div>
+          </a>
+          <div class="app-body">
+            <div class="app-head">
+              <div class="app-icon">
+                <img src="images/commissionbuddy-icon.svg" width="52" height="52" alt="Commission Buddy app icon" />
+              </div>
+              <div>
+                <h3 class="app-title">Commission Buddy</h3>
+                <p class="app-tagline">For Australian real estate agents</p>
+              </div>
+            </div>
+            <p class="app-desc">The privacy-first commission calculator and income tracker. Work out splits, fees, and take-home on every listing, forecast your financial year, and track tier progress — all on your device.</p>
+            <ul class="chips" aria-label="Available on">
+              <li>iPhone</li><li>iPad</li>
+            </ul>
+            <div class="app-links">
+              <a class="app-link app-link-store"
+                href="https://apps.apple.com/app/apple-store/id6760575848?pt=128618011&amp;ct=devsite&amp;mt=8"
+                target="_blank" rel="noopener noreferrer" aria-label="Commission Buddy on the App Store">App Store</a>
+              <a class="app-link" href="https://commissionbuddy.app" target="_blank" rel="noopener noreferrer"
+                aria-label="Commission Buddy website">
+                Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
+              </a>
+            </div>
           </div>
+        </article>
 
-        </a>
+        <!-- ── Yakable ── -->
+        <article id="yakable" class="app-card app-yakable" data-app="yakable">
+          <a class="app-stage" href="https://yakable.app" target="_blank" rel="noopener noreferrer"
+            tabindex="-1" aria-hidden="true">
+            <!-- Illustrative question cards, drawn in CSS -->
+            <div class="yak-card yak-card-back">
+              <span class="yak-chip">Point at the person</span>
+              <span class="yak-q">who would win an argument with a vending machine.</span>
+            </div>
+            <div class="yak-card yak-card-front">
+              <span class="yak-chip">Main</span>
+              <span class="yak-q">What's a lesson you learned the hard way?</span>
+              <span class="yak-btns"><span>Go deeper</span><span>Keep it light</span></span>
+            </div>
+          </a>
+          <div class="app-body">
+            <div class="app-head">
+              <div class="app-icon">
+                <img src="images/icons/yakable.webp" width="52" height="52" alt="Yakable app icon" />
+              </div>
+              <div>
+                <h3 class="app-title">Yakable</h3>
+                <p class="app-tagline">Grab the convo by the horns</p>
+              </div>
+            </div>
+            <p class="app-desc">Restaurant-style conversation courses for dates, after-work drinks, and dinner with mates. One question at a time — no awkward silences, no phones-out scrolling.</p>
+            <ul class="chips" aria-label="Available on">
+              <li>iPhone</li><li>iPad</li>
+            </ul>
+            <div class="app-links">
+              <a class="app-link app-link-store"
+                href="https://apps.apple.com/app/apple-store/id6760983071?pt=128618011&amp;ct=devsite&amp;mt=8"
+                target="_blank" rel="noopener noreferrer" aria-label="Yakable on the App Store">App Store</a>
+              <a class="app-link" href="https://yakable.app" target="_blank" rel="noopener noreferrer"
+                aria-label="Yakable website">
+                Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── What's next ── -->
+        <article class="app-card app-next">
+          <div class="app-next-inner">
+            <svg class="app-next-pineapple" viewBox="0 0 40 52" aria-hidden="true">
+              <use href="#pineapple"/>
+            </svg>
+            <h3 class="app-title">More buddies on the way</h3>
+            <p class="app-desc">Got an everyday job an app could do better? I'd love to hear it.</p>
+            <a class="app-link" href="#contact">
+              Say hello <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
+            </a>
+          </div>
+        </article>
 
       </div>
     </div>
+  </section>
+
+
+  <!-- ── Made in Brisbane ───────────────────────────────────────── -->
+  <section id="brisbane" class="made-section">
+
+    <!-- Drifting jacaranda petals (decorative; static under reduced motion) -->
+    <div class="petals" aria-hidden="true">
+      <span class="petal petal-c" style="--x:2.5%;--s:12px;--d:12.2s;--delay:-0.8s;--y:74%;--r:48deg;--sway:18px"></span>
+      <span class="petal petal-a" style="--x:8.1%;--s:18px;--d:10.7s;--delay:-1.4s;--y:59%;--r:35deg;--sway:-22px"></span>
+      <span class="petal petal-c" style="--x:18.2%;--s:10px;--d:15.6s;--delay:-2.0s;--y:34%;--r:298deg;--sway:-36px"></span>
+      <span class="petal petal-a" style="--x:25.5%;--s:10px;--d:16.8s;--delay:-0.7s;--y:23%;--r:148deg;--sway:30px"></span>
+      <span class="petal petal-c" style="--x:32.4%;--s:18px;--d:11.5s;--delay:-13.1s;--y:29%;--r:52deg;--sway:44px"></span>
+      <span class="petal petal-a" style="--x:40.1%;--s:14px;--d:9.8s;--delay:-11.4s;--y:78%;--r:30deg;--sway:44px"></span>
+      <span class="petal petal-b" style="--x:46.4%;--s:18px;--d:12.4s;--delay:-5.0s;--y:80%;--r:232deg;--sway:18px"></span>
+      <span class="petal petal-b" style="--x:52.1%;--s:12px;--d:14.6s;--delay:-3.9s;--y:79%;--r:153deg;--sway:44px"></span>
+      <span class="petal petal-a" style="--x:63.0%;--s:16px;--d:11.3s;--delay:-15.7s;--y:21%;--r:262deg;--sway:30px"></span>
+      <span class="petal petal-b" style="--x:69.4%;--s:12px;--d:16.5s;--delay:-6.7s;--y:15%;--r:285deg;--sway:44px"></span>
+      <span class="petal petal-b" style="--x:74.0%;--s:14px;--d:13.8s;--delay:-9.3s;--y:64%;--r:35deg;--sway:-36px"></span>
+      <span class="petal petal-b" style="--x:82.0%;--s:10px;--d:9.5s;--delay:-11.2s;--y:88%;--r:295deg;--sway:30px"></span>
+      <span class="petal petal-b" style="--x:90.6%;--s:14px;--d:9.2s;--delay:-7.4s;--y:27%;--r:312deg;--sway:-36px"></span>
+      <span class="petal petal-a" style="--x:93.8%;--s:14px;--d:10.0s;--delay:-4.0s;--y:56%;--r:254deg;--sway:-36px"></span>
+    </div>
+
+    <div class="made-grid">
+      <div class="section-header made-inner">
+        <p class="section-label">Made in Brisbane</p>
+        <h2 class="section-title">Built where the jacarandas bloom</h2>
+        <p class="made-text">
+          Every Buddy app is designed and built in Brisbane, Australia: home of the
+          jacaranda, and host city of the 2032 Olympic and Paralympic Games.
+        </p>
+      </div>
+
+      <div class="made-photos">
+        <img class="made-photo made-photo-a" src="images/brisbane/jacaranda-street.webp" width="1100" height="734"
+          alt="A jacaranda tree in full purple bloom against a blue Brisbane sky" loading="lazy" />
+        <img class="made-photo made-photo-b" src="images/brisbane/jacaranda-canopy.webp" width="1000" height="930"
+          alt="Looking up through jacaranda branches heavy with purple flowers" loading="lazy" />
+      </div>
+    </div>
+
   </section>
 
 
@@ -522,15 +676,29 @@
       </div>
 
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="/scorebuddyforphase10/">Score Buddy</a>
+        <a href="https://weekendbuddy.app" target="_blank" rel="noopener noreferrer">Weekend Buddy</a>
         <a href="https://tzbuddy.app" target="_blank" rel="noopener noreferrer">Time Zone Buddy</a>
+        <a href="/scorebuddyforphase10/">Score Buddy</a>
         <a href="https://commissionbuddy.app" target="_blank" rel="noopener noreferrer">Commission Buddy</a>
+        <a href="https://yakable.app" target="_blank" rel="noopener noreferrer">Yakable</a>
       </nav>
 
-      <p class="footer-copy">© 2026 Scott Breen. All rights reserved.</p>
+      <p class="footer-copy">Made in Brisbane, Australia. © 2026 Scott Breen. All rights reserved.</p>
 
     </div>
   </footer>
+
+
+  <!-- ── Mobile app bar ─────────────────────────────────────────── -->
+  <!-- Phones only: slides up once the hero dock scrolls away, and marks the app
+       currently on screen. -->
+  <nav id="appbar" class="appbar" aria-label="Jump to an app">
+    <a href="#weekend-buddy" class="appbar-item" data-app="weekend" aria-label="Weekend Buddy"><span class="appbar-tile"><img src="images/icons/weekendbuddy.webp" width="64" height="64" alt="" /></span></a>
+    <a href="#score-buddy" class="appbar-item" data-app="score" aria-label="Score Buddy for Phase 10"><span class="appbar-tile icon-score"><svg viewBox="0 0 1024 1024" aria-hidden="true"><use href="#score-buddy-icon"/></svg></span></a>
+    <a href="#time-zone-buddy" class="appbar-item" data-app="tz" aria-label="Time Zone Buddy"><span class="appbar-tile"><img src="images/icons/tzbuddy.webp" width="64" height="64" alt="" /></span></a>
+    <a href="#commission-buddy" class="appbar-item" data-app="commission" aria-label="Commission Buddy"><span class="appbar-tile"><img src="images/commissionbuddy-icon.svg" width="64" height="64" alt="" /></span></a>
+    <a href="#yakable" class="appbar-item" data-app="yakable" aria-label="Yakable"><span class="appbar-tile"><img src="images/icons/yakable.webp" width="64" height="64" alt="" /></span></a>
+  </nav>
 
 </body>
 </html>
