@@ -650,3 +650,54 @@ html.guides .reel::after {
 html.guides .avatar::after {
   background: radial-gradient(circle closest-side, transparent 99.6%, rgba(255, 0, 80, 0.4) 100%);
 }
+
+
+/* === Photo post ==================================================
+   A full-bleed photo. Dark scrims top and bottom keep the white type
+   and the signature readable over any picture. */
+.photo-post {
+  --fg: #FFFFFF;  --soft: rgba(255, 255, 255, 0.86);  --hi: #E4D6FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #1B1430;
+}
+
+.photo-fill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-post::before,
+.photo-post::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.photo-post::before {
+  top: 0;
+  height: 46%;
+  background: linear-gradient(180deg, rgba(14, 10, 28, 0.78) 0%, rgba(14, 10, 28, 0.45) 55%, transparent 100%);
+}
+
+.photo-post::after {
+  bottom: 0;
+  height: 28%;
+  background: linear-gradient(0deg, rgba(14, 10, 28, 0.8) 0%, transparent 100%);
+}
+
+.photo-post .photo-top,
+.photo-post .sig {
+  position: relative;
+  z-index: 2;
+}
+
+.photo-post .overline { color: var(--hi); }
+.photo-post .headline { margin-top: 20px; text-shadow: 0 2px 24px rgba(14, 10, 28, 0.45); }

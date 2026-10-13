@@ -123,3 +123,10 @@ app repos use):
 `./publish.sh` exports everything and refreshes the profile picture and `stencils/`. Set
 `SBD_OUTPUT` to publish somewhere else. Post folders are made by hand: copy the exported PNG in and
 write the caption beside it. `out/` is git-ignored.
+
+## Photo post
+
+`photo-post.html` (1080×1350) is a full-bleed photo with a headline over the top and the signature
+over the bottom; it works as a feed post or a carousel cover. The photo is a 1080×1350 JPEG in
+`assets/`. Before a photo goes in, check it for number plates, faces, street signs and shop names,
+crop them out rather than blurring, and strip the metadata (iPhone photos carry the location).
