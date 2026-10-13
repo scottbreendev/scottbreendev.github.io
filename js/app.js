@@ -124,6 +124,7 @@ function initRotor(animated) {
 
   let current = words[0];
   let timer = null;
+  let sinceChip = 0;     // headline changes since the news chip last switched
   let held = false;      // pointer or focus is on the dock
   let visible = true;    // hero is on screen
 
@@ -141,9 +142,17 @@ function initRotor(animated) {
     items.forEach(function (a) { a.classList.toggle('is-active', a.dataset.app === app); });
     if (caption) caption.textContent = names[app];
 
-    // The news chip follows along when the app has news; otherwise it holds
-    if (chips.some(function (c) { return c.dataset.app === app; })) {
-      chips.forEach(function (c) { c.classList.toggle('is-current', c.dataset.app === app); });
+    // The news chip shows this app's news if it has any. Apps without news hold the
+    // chip for a beat, then hand over to the next one, so each chip gets a fair turn.
+    let chip = chips.find(function (c) { return c.dataset.app === app; });
+    sinceChip += 1;
+    if (!chip && sinceChip >= 2 && chips.length > 1) {
+      const at = chips.findIndex(function (c) { return c.classList.contains('is-current'); });
+      chip = chips[(at + 1) % chips.length];
+    }
+    if (chip && !chip.classList.contains('is-current')) {
+      chips.forEach(function (c) { c.classList.toggle('is-current', c === chip); });
+      sinceChip = 0;
     }
 
     const prev = current;

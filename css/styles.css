@@ -226,7 +226,7 @@ html.dark .theme-moon { display: none;  }
 .hero {
   --glow: var(--color-brand-bright);
   position: relative;
-  min-height: 96vh;
+  min-height: calc(100vh - 3.75rem);   /* leaves the ticker peeking at the bottom */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,6 +241,18 @@ html.dark .theme-moon { display: none;  }
 .hero[data-active="score"]      { --glow: #1D6FF0; }
 .hero[data-active="commission"] { --glow: #1F9D57; }
 .hero[data-active="yakable"]    { --glow: #FF4D8D; }
+
+/* The hero melts into the ticker band below instead of ending on a hard edge */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  background: linear-gradient(180deg, transparent, var(--color-surface-raised));
+  pointer-events: none;
+}
 
 /* Soft colour wash behind the dock; takes the active app's colour */
 .hero-glow {
@@ -473,6 +485,49 @@ html.dark .theme-moon { display: none;  }
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-text-muted);
+}
+
+
+/* === Ticker ====================================================== */
+.ticker {
+  overflow: hidden;
+  padding: 1rem 0;
+  background-color: var(--color-surface-raised);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 48s linear infinite;
+}
+
+.ticker-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.ticker-item {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  color: var(--color-text-secondary);
+}
+
+.ticker-sep {
+  flex-shrink: 0;
+  width: 15px;
+  height: auto;
+  color: var(--color-brand-bright);
+}
+
+@keyframes ticker {
+  to { transform: translateX(-50%); }
 }
 
 
@@ -1393,7 +1448,7 @@ html.dark .theme-moon { display: none;  }
 
   /* Hero fills the first screen, with the dock in thumb reach */
   .hero {
-    min-height: 100svh;
+    min-height: calc(100svh - 3.5rem);
     padding: 5.25rem 1.125rem 2.5rem;
   }
 

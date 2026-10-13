@@ -45,14 +45,23 @@
       "jobTitle": "App Developer",
       "description": "Independent app developer making the Buddy family — small, focused apps for iPhone and iPad.",
       "email": "scott.breen.dev@outlook.com",
-      "sameAs": ["https://www.linkedin.com/in/scottbreen/"],
+      "sameAs": [
+        "https://www.linkedin.com/in/scottbreen/"
+      ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Brisbane",
         "addressRegion": "QLD",
         "addressCountry": "AU"
       },
-      "knowsAbout": ["iOS Development", "macOS Development", "Swift", "SwiftUI", "App Store", "Phase 10"]
+      "knowsAbout": [
+        "iOS Development",
+        "macOS Development",
+        "Swift",
+        "SwiftUI",
+        "App Store",
+        "Phase 10"
+      ]
     },
     {
       "@context": "https://schema.org",
@@ -72,13 +81,16 @@
           "position": 1,
           "item": {
             "@type": "SoftwareApplication",
-            "name": "Weekend Buddy",
-            "operatingSystem": "iOS, iPadOS",
-            "applicationCategory": "ProductivityApplication",
-            "description": "Dinners, parties, trips and birthdays, laid out weekend by weekend, with the working week left out. Works with the calendars you already have. No account. Available on the App Store in Australia.",
-            "url": "https://weekendbuddy.app",
-            "installUrl": "https://apps.apple.com/au/app/weekend-buddy/id6808475914",
-            "author": { "@type": "Person", "name": "Scott Breen" }
+            "name": "Time Zone Buddy",
+            "operatingSystem": "iOS, iPadOS, macOS, watchOS",
+            "applicationCategory": "BusinessApplication",
+            "description": "World clocks, meeting overlap finder, and work-hours awareness — beautifully at a glance for people who work across time zones. On iPhone, iPad, Apple Watch and Mac.",
+            "url": "https://tzbuddy.app",
+            "installUrl": "https://apps.apple.com/app/time-zone-buddy/id6760805989",
+            "author": {
+              "@type": "Person",
+              "name": "Scott Breen"
+            }
           }
         },
         {
@@ -86,32 +98,21 @@
           "position": 2,
           "item": {
             "@type": "SoftwareApplication",
-            "name": "Time Zone Buddy",
-            "operatingSystem": "iOS, iPadOS, macOS, watchOS",
-            "applicationCategory": "BusinessApplication",
-            "description": "World clocks, meeting overlap finder, and work-hours awareness — beautifully at a glance for people who work across time zones. On iPhone, iPad, Apple Watch and Mac.",
-            "url": "https://tzbuddy.app",
-            "installUrl": "https://apps.apple.com/app/time-zone-buddy/id6760805989",
-            "author": { "@type": "Person", "name": "Scott Breen" }
+            "name": "Weekend Buddy",
+            "operatingSystem": "iOS, iPadOS",
+            "applicationCategory": "ProductivityApplication",
+            "description": "Dinners, parties, trips and birthdays, laid out weekend by weekend, with the working week left out. Works with the calendars you already have. No account. Available on the App Store in Australia.",
+            "url": "https://weekendbuddy.app",
+            "installUrl": "https://apps.apple.com/au/app/weekend-buddy/id6808475914",
+            "author": {
+              "@type": "Person",
+              "name": "Scott Breen"
+            }
           }
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "Score Buddy for Phase 10",
-            "operatingSystem": "iOS, iPadOS",
-            "applicationCategory": "GameApplication",
-            "description": "The Phase 10 score tracker. Round-by-round scoring, skip card analytics, live rankings, and deep stats for serious game night players.",
-            "url": "https://scottbreendev.github.io/scorebuddyforphase10/",
-            "installUrl": "https://apps.apple.com/app/score-buddy-for-phase-10/id6760017130",
-            "author": { "@type": "Person", "name": "Scott Breen" }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
           "item": {
             "@type": "SoftwareApplication",
             "name": "Commission Buddy",
@@ -120,12 +121,15 @@
             "description": "The privacy-first real estate commission calculator and income tracker. Work out splits, fees, and take-home on every listing, forecast your financial year, and track tier progress — all on your device.",
             "url": "https://commissionbuddy.app",
             "installUrl": "https://apps.apple.com/app/id6760575848",
-            "author": { "@type": "Person", "name": "Scott Breen" }
+            "author": {
+              "@type": "Person",
+              "name": "Scott Breen"
+            }
           }
         },
         {
           "@type": "ListItem",
-          "position": 5,
+          "position": 4,
           "item": {
             "@type": "SoftwareApplication",
             "name": "Yakable",
@@ -134,7 +138,27 @@
             "description": "Restaurant-style conversation courses for dates, after-work drinks, and dinner with mates. One question at a time — no awkward silences, no phones-out scrolling.",
             "url": "https://yakable.app",
             "installUrl": "https://apps.apple.com/app/yakable/id6760983071",
-            "author": { "@type": "Person", "name": "Scott Breen" }
+            "author": {
+              "@type": "Person",
+              "name": "Scott Breen"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Score Buddy for Phase 10",
+            "operatingSystem": "iOS, iPadOS",
+            "applicationCategory": "GameApplication",
+            "description": "The Phase 10 score tracker. Round-by-round scoring, skip card analytics, live rankings, and deep stats for serious game night players.",
+            "url": "https://scottbreendev.github.io/scorebuddyforphase10/",
+            "installUrl": "https://apps.apple.com/app/score-buddy-for-phase-10/id6760017130",
+            "author": {
+              "@type": "Person",
+              "name": "Scott Breen"
+            }
           }
         }
       ]
@@ -279,14 +303,14 @@
       <!-- Latest news. With motion on, app.js shows one chip at a time, in step with
            the headline; otherwise both chips are shown. -->
       <div class="hero-news hero-anim">
-        <a href="#news-weekend" class="news-chip is-current" data-app="weekend">
-          <img class="news-chip-icon" src="images/icons/weekendbuddy.webp" width="28" height="28" alt="" />
-          <span class="news-chip-text"><b>New</b> Weekend Buddy is out in Australia</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
-        </a>
-        <a href="#news-mac" class="news-chip" data-app="tz">
+        <a href="#news-mac" class="news-chip is-current" data-app="tz">
           <img class="news-chip-icon" src="images/icons/tzbuddy.webp" width="28" height="28" alt="" />
           <span class="news-chip-text"><b>New</b> Time Zone Buddy is now on Mac</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
+        </a>
+        <a href="#news-weekend" class="news-chip" data-app="weekend">
+          <img class="news-chip-icon" src="images/icons/weekendbuddy.webp" width="28" height="28" alt="" />
+          <span class="news-chip-text"><b>New</b> Weekend Buddy is out in Australia</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
         </a>
       </div>
@@ -297,11 +321,11 @@
         <span aria-hidden="true">Apps that become your</span>
         <span class="rotor" aria-hidden="true">
           <span class="rotor-word is-current" data-app="">everyday</span>
-          <span class="rotor-word" data-app="weekend">weekend</span>
-          <span class="rotor-word" data-app="score">game night</span>
           <span class="rotor-word" data-app="tz">time zone</span>
+          <span class="rotor-word" data-app="weekend">weekend</span>
           <span class="rotor-word" data-app="commission">commission</span>
           <span class="rotor-word" data-app="yakable">conversation</span>
+          <span class="rotor-word" data-app="score">game night</span>
         </span>
         <span aria-hidden="true">buddy.</span>
       </h1>
@@ -313,11 +337,11 @@
 
       <!-- App dock — each icon jumps to that app's card -->
       <nav class="dock" aria-label="The apps">
-        <a href="#weekend-buddy" class="dock-item" data-app="weekend" aria-label="Weekend Buddy"><span class="dock-tile"><img src="images/icons/weekendbuddy.webp" width="64" height="64" alt="" /></span></a>
-        <a href="#score-buddy" class="dock-item" data-app="score" aria-label="Score Buddy for Phase 10"><span class="dock-tile icon-score"><svg viewBox="0 0 1024 1024" aria-hidden="true"><use href="#score-buddy-icon"/></svg></span></a>
         <a href="#time-zone-buddy" class="dock-item" data-app="tz" aria-label="Time Zone Buddy"><span class="dock-tile"><img src="images/icons/tzbuddy.webp" width="64" height="64" alt="" /></span></a>
+        <a href="#weekend-buddy" class="dock-item" data-app="weekend" aria-label="Weekend Buddy"><span class="dock-tile"><img src="images/icons/weekendbuddy.webp" width="64" height="64" alt="" /></span></a>
         <a href="#commission-buddy" class="dock-item" data-app="commission" aria-label="Commission Buddy"><span class="dock-tile"><img src="images/commissionbuddy-icon.svg" width="64" height="64" alt="" /></span></a>
         <a href="#yakable" class="dock-item" data-app="yakable" aria-label="Yakable"><span class="dock-tile"><img src="images/icons/yakable.webp" width="64" height="64" alt="" /></span></a>
+        <a href="#score-buddy" class="dock-item" data-app="score" aria-label="Score Buddy for Phase 10"><span class="dock-tile icon-score"><svg viewBox="0 0 1024 1024" aria-hidden="true"><use href="#score-buddy-icon"/></svg></span></a>
       </nav>
 
       <p class="dock-caption hero-anim" aria-hidden="true">
@@ -326,6 +350,42 @@
 
     </div>
   </section>
+
+  <!-- ── Ticker ─────────────────────────────────────────────────── -->
+  <!-- A moving divider between the hero and the content. Decorative: the two
+       groups are identical so the loop is seamless. -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+        <div class="ticker-group">
+          <span class="ticker-item">Time Zone Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Weekend Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Commission Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Yakable</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Score Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Made in Brisbane</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Time Zone Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Weekend Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Commission Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Yakable</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Score Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Made in Brisbane</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+        </div>
+        <div class="ticker-group">
+          <span class="ticker-item">Time Zone Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Weekend Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Commission Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Yakable</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Score Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Made in Brisbane</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Time Zone Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Weekend Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Commission Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Yakable</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Score Buddy</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+          <span class="ticker-item">Made in Brisbane</span><svg class="ticker-sep" viewBox="0 0 40 52"><use href="#pineapple"/></svg>
+        </div>
+    </div>
+  </div>
 
 
   <!-- ── What's new ─────────────────────────────────────────────── -->
@@ -415,40 +475,6 @@
 
       <div class="apps-grid">
 
-        <!-- ── Weekend Buddy ── -->
-        <article id="weekend-buddy" class="app-card app-weekend" data-app="weekend">
-          <a class="app-stage" href="https://weekendbuddy.app" target="_blank" rel="noopener noreferrer"
-            tabindex="-1" aria-hidden="true">
-            <div class="phone">
-              <img src="images/shots/weekendbuddy-weekends.webp" width="600" height="1304" alt="" loading="lazy" />
-            </div>
-          </a>
-          <div class="app-body">
-            <div class="app-head">
-              <div class="app-icon">
-                <img src="images/icons/weekendbuddy.webp" width="52" height="52" alt="Weekend Buddy app icon" />
-              </div>
-              <div>
-                <h3 class="app-title">Weekend Buddy</h3>
-                <p class="app-tagline">Your weekends, at a glance</p>
-              </div>
-            </div>
-            <p class="app-desc">Dinners, parties, trips and birthdays, laid out weekend by weekend, with the working week left out. Works with the calendars you already have. No account.</p>
-            <ul class="chips" aria-label="Available on">
-              <li>iPhone</li><li>iPad</li><li class="chip-new">New in Australia</li>
-            </ul>
-            <div class="app-links">
-              <a class="app-link app-link-store"
-                href="https://apps.apple.com/au/app/weekend-buddy/id6808475914?pt=128618011&amp;ct=devsite&amp;mt=8"
-                target="_blank" rel="noopener noreferrer" aria-label="Weekend Buddy on the App Store">App Store</a>
-              <a class="app-link" href="https://weekendbuddy.app" target="_blank" rel="noopener noreferrer"
-                aria-label="Weekend Buddy website">
-                Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
-              </a>
-            </div>
-          </div>
-        </article>
-
         <!-- ── Time Zone Buddy ── -->
         <article id="time-zone-buddy" class="app-card app-tz" data-app="tz">
           <a class="app-stage" href="https://tzbuddy.app" target="_blank" rel="noopener noreferrer"
@@ -483,34 +509,34 @@
           </div>
         </article>
 
-        <!-- ── Score Buddy for Phase 10 ── -->
-        <article id="score-buddy" class="app-card app-score" data-app="score">
-          <a class="app-stage" href="/scorebuddyforphase10/" tabindex="-1" aria-hidden="true">
+        <!-- ── Weekend Buddy ── -->
+        <article id="weekend-buddy" class="app-card app-weekend" data-app="weekend">
+          <a class="app-stage" href="https://weekendbuddy.app" target="_blank" rel="noopener noreferrer"
+            tabindex="-1" aria-hidden="true">
             <div class="phone">
-              <img src="images/shots/scorebuddy-home.webp" width="600" height="1304" alt="" loading="lazy" />
+              <img src="images/shots/weekendbuddy-weekends.webp" width="600" height="1304" alt="" loading="lazy" />
             </div>
           </a>
           <div class="app-body">
             <div class="app-head">
-              <div class="app-icon icon-score">
-                <svg viewBox="0 0 1024 1024" width="52" height="52" aria-label="Score Buddy for Phase 10 app icon" role="img">
-                  <use href="#score-buddy-icon"/>
-                </svg>
+              <div class="app-icon">
+                <img src="images/icons/weekendbuddy.webp" width="52" height="52" alt="Weekend Buddy app icon" />
               </div>
               <div>
-                <h3 class="app-title">Score Buddy</h3>
-                <p class="app-tagline">for Phase 10</p>
+                <h3 class="app-title">Weekend Buddy</h3>
+                <p class="app-tagline">Your weekends, at a glance</p>
               </div>
             </div>
-            <p class="app-desc">The Phase 10 score tracker. Round-by-round scoring, skip card analytics, live rankings, and deep stats for serious game night players.</p>
+            <p class="app-desc">Dinners, parties, trips and birthdays, laid out weekend by weekend, with the working week left out. Works with the calendars you already have. No account.</p>
             <ul class="chips" aria-label="Available on">
-              <li>iPhone</li><li>iPad</li>
+              <li>iPhone</li><li>iPad</li><li class="chip-new">New in Australia</li>
             </ul>
             <div class="app-links">
               <a class="app-link app-link-store"
-                href="https://apps.apple.com/app/apple-store/id6760017130?pt=128618011&amp;ct=devsite&amp;mt=8"
-                target="_blank" rel="noopener noreferrer" aria-label="Score Buddy for Phase 10 on the App Store">App Store</a>
-              <a class="app-link" href="/scorebuddyforphase10/" aria-label="Score Buddy for Phase 10 website">
+                href="https://apps.apple.com/au/app/weekend-buddy/id6808475914?pt=128618011&amp;ct=devsite&amp;mt=8"
+                target="_blank" rel="noopener noreferrer" aria-label="Weekend Buddy on the App Store">App Store</a>
+              <a class="app-link" href="https://weekendbuddy.app" target="_blank" rel="noopener noreferrer"
+                aria-label="Weekend Buddy website">
                 Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
               </a>
             </div>
@@ -586,6 +612,40 @@
                 target="_blank" rel="noopener noreferrer" aria-label="Yakable on the App Store">App Store</a>
               <a class="app-link" href="https://yakable.app" target="_blank" rel="noopener noreferrer"
                 aria-label="Yakable website">
+                Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Score Buddy for Phase 10 ── -->
+        <article id="score-buddy" class="app-card app-score" data-app="score">
+          <a class="app-stage" href="/scorebuddyforphase10/" tabindex="-1" aria-hidden="true">
+            <div class="phone">
+              <img src="images/shots/scorebuddy-home.webp" width="600" height="1304" alt="" loading="lazy" />
+            </div>
+          </a>
+          <div class="app-body">
+            <div class="app-head">
+              <div class="app-icon icon-score">
+                <svg viewBox="0 0 1024 1024" width="52" height="52" aria-label="Score Buddy for Phase 10 app icon" role="img">
+                  <use href="#score-buddy-icon"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="app-title">Score Buddy</h3>
+                <p class="app-tagline">for Phase 10</p>
+              </div>
+            </div>
+            <p class="app-desc">The Phase 10 score tracker. Round-by-round scoring, skip card analytics, live rankings, and deep stats for serious game night players.</p>
+            <ul class="chips" aria-label="Available on">
+              <li>iPhone</li><li>iPad</li>
+            </ul>
+            <div class="app-links">
+              <a class="app-link app-link-store"
+                href="https://apps.apple.com/app/apple-store/id6760017130?pt=128618011&amp;ct=devsite&amp;mt=8"
+                target="_blank" rel="noopener noreferrer" aria-label="Score Buddy for Phase 10 on the App Store">App Store</a>
+              <a class="app-link" href="/scorebuddyforphase10/" aria-label="Score Buddy for Phase 10 website">
                 Visit site <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-right"/></svg>
               </a>
             </div>
@@ -682,11 +742,11 @@
       </div>
 
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="https://weekendbuddy.app" target="_blank" rel="noopener noreferrer">Weekend Buddy</a>
         <a href="https://tzbuddy.app" target="_blank" rel="noopener noreferrer">Time Zone Buddy</a>
-        <a href="/scorebuddyforphase10/">Score Buddy</a>
+        <a href="https://weekendbuddy.app" target="_blank" rel="noopener noreferrer">Weekend Buddy</a>
         <a href="https://commissionbuddy.app" target="_blank" rel="noopener noreferrer">Commission Buddy</a>
         <a href="https://yakable.app" target="_blank" rel="noopener noreferrer">Yakable</a>
+        <a href="/scorebuddyforphase10/">Score Buddy</a>
       </nav>
 
       <p class="footer-copy">Made in Brisbane, Australia. © 2026 Scott Breen. All rights reserved.</p>
@@ -699,11 +759,11 @@
   <!-- Phones only: slides up once the hero dock scrolls away, and marks the app
        currently on screen. -->
   <nav id="appbar" class="appbar" aria-label="Jump to an app">
-    <a href="#weekend-buddy" class="appbar-item" data-app="weekend" aria-label="Weekend Buddy"><span class="appbar-tile"><img src="images/icons/weekendbuddy.webp" width="64" height="64" alt="" /></span></a>
-    <a href="#score-buddy" class="appbar-item" data-app="score" aria-label="Score Buddy for Phase 10"><span class="appbar-tile icon-score"><svg viewBox="0 0 1024 1024" aria-hidden="true"><use href="#score-buddy-icon"/></svg></span></a>
     <a href="#time-zone-buddy" class="appbar-item" data-app="tz" aria-label="Time Zone Buddy"><span class="appbar-tile"><img src="images/icons/tzbuddy.webp" width="64" height="64" alt="" /></span></a>
+    <a href="#weekend-buddy" class="appbar-item" data-app="weekend" aria-label="Weekend Buddy"><span class="appbar-tile"><img src="images/icons/weekendbuddy.webp" width="64" height="64" alt="" /></span></a>
     <a href="#commission-buddy" class="appbar-item" data-app="commission" aria-label="Commission Buddy"><span class="appbar-tile"><img src="images/commissionbuddy-icon.svg" width="64" height="64" alt="" /></span></a>
     <a href="#yakable" class="appbar-item" data-app="yakable" aria-label="Yakable"><span class="appbar-tile"><img src="images/icons/yakable.webp" width="64" height="64" alt="" /></span></a>
+    <a href="#score-buddy" class="appbar-item" data-app="score" aria-label="Score Buddy for Phase 10"><span class="appbar-tile icon-score"><svg viewBox="0 0 1024 1024" aria-hidden="true"><use href="#score-buddy-icon"/></svg></span></a>
   </nav>
 
 </body>
