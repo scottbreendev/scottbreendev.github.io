@@ -241,7 +241,9 @@ img, svg { display: block; }
   box-shadow: 0 0 0 2px rgba(192, 138, 20, 0.35) inset, 0 12px 22px -14px var(--drop);
 }
 
-.badge img { height: 66%; width: auto; }
+/* Sized from --s, not a percentage: a % height on a grid item with no fixed row
+   falls back to the SVG's natural size, which pushed the pineapple out of the disc. */
+.badge img { display: block; height: calc(var(--s) * 0.68); width: auto; }
 
 /* Signature: badge + "Scott Breen" + handle */
 .sig {
